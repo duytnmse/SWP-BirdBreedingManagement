@@ -444,36 +444,18 @@ export default function RootLayout({ children }) {
       "/assets/plugins/moment/moment.min.js",
       "/assets/plugins/jquery/jquery.min.js",
       "/assets/plugins/daterangepicker/daterangepicker.min.js",
-      "/assets/plugins/datatables/jquery.dataTables.min.js",
+      // "/assets/plugins/datatables/jquery.dataTables.min.js",
       "/assets/plugins/chart/chart/Chart.min.js",
 
       "/assets/plugins/chart/apexcharts-bundle/js/apexcharts.js",
       "/assets/plugins/chart/apexcharts-bundle/js/apexcharts.min.js",
 
-      "/assets/js/init-tdatatable.js",
+      // "/assets/js/init-tdatatable.js",
       "/assets/js/charts-custom.js",
       "/assets/js/toggleFullScreen.js",
       "/assets/js/main.js",
       "/assets/js/option-themes.js",
-      // "/assets/js/apex-custom.js",
-      // "/assets/js/charts-custom.js",
-      // "/assets/js/init-tdatatable.js",
-      // "/assets/js/main.js",
-      // "/assets/js/option-themes.js",
-      // "/assets/js/toggleFullScreen.js",
-      // "/assets/plugins/bootstrap/js/bootstrap.js",
-      // "/assets/plugins/bootstrap/js/bootstrap.js.map",
-      // "/assets/plugins/bootstrap/js/bootstrap.min.js",
-      // "/assets/plugins/bootstrap/js/bootstrap.js.map",
-      // "/assets/plugins/calendar/calendar-init.js",
-      // "/assets/plugins/calendar/fullcalendar.min.js",
-      // "/assets/plugins/chart/chart/Chart.min.js",
-      // "/assets/plugins/datatables/jquery.dataTables.min.js",
-      // "/assets/plugins/daterangepicker/daterangepicker.min.js",
-      
-
-      // "/assets/plugins/moment/moment.min.js",
-      // "/assets/plugins/popper/popper.min.js",
+    
     ];
 
     const loadScript = (src) => {
@@ -519,13 +501,13 @@ export default function RootLayout({ children }) {
         "/assets/plugins/moment/moment.min.js",
         "/assets/plugins/jquery/jquery.min.js",
         "/assets/plugins/daterangepicker/daterangepicker.min.js",
-        "/assets/plugins/datatables/jquery.dataTables.min.js",
+        // "/assets/plugins/datatables/jquery.dataTables.min.js",
         "/assets/plugins/chart/chart/Chart.min.js",
 
         "/assets/plugins/chart/apexcharts-bundle/js/apexcharts.js",
         "/assets/plugins/chart/apexcharts-bundle/js/apexcharts.min.js",
 
-        "/assets/js/init-tdatatable.js",
+        // "/assets/js/init-tdatatable.js",
         "/assets/js/charts-custom.js",
         "/assets/js/toggleFullScreen.js",
         "/assets/js/main.js",
@@ -549,7 +531,6 @@ export default function RootLayout({ children }) {
         // "/assets/plugins/chart/chart/Chart.min.js",
         // "/assets/plugins/datatables/jquery.dataTables.min.js",
         // "/assets/plugins/daterangepicker/daterangepicker.min.js",
-        
 
         // "/assets/plugins/moment/moment.min.js",
         // "/assets/plugins/popper/popper.min.js",
@@ -566,7 +547,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-          {children}
+        {isLoading ? (
+          <div className="preloader">
+            <div className="lds-ellipsis">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        ) : (
+          <div>
+            {children}
+          </div>
+        )}
       </body>
     </html>
   );
