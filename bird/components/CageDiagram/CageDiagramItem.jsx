@@ -23,7 +23,7 @@ const CageDiagramItem = ({ id, name, specialty, imageSrc, starReview, }) => {
 
     return (
         <div className="col-sm-6 col-lg-4">
-            <Link href={`/cage-diagram/${id}`}>
+            <Link href={`/cage/${id}`}>
                 <div className="timeline-panel card p-4 mb-4">
                     <div className="media">
                         <img
