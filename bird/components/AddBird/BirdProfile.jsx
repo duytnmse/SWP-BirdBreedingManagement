@@ -1,10 +1,10 @@
 import React from 'react'
 
-const StaffProfile = () => {
+const BirdProfile = () => {
     return (
         <div className="card">
             <div className="card-header">
-                <h4 className="card-title">Thông tin nhân viên</h4>
+                <h4 className="card-title">Thông Tin Chim</h4>
             </div>
             <div className="card-body">
                 <div className="basic-form">
@@ -41,35 +41,43 @@ const StaffProfile = () => {
                                 </div>
                             </div>
                             <div className="col-xl-8">
-                                <div className="form-group">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="User Name"
-                                    />
-                                </div>
 
                                 <div className="form-group">
                                     <input
-                                        type="email"
+                                        type="date"
                                         className="form-control"
-                                        placeholder="Email"
+                                        placeholder="Date Of Birth"
+                                    />
+                                </div>
+                              
+                                <div className="form-group">
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        placeholder="Cân Nặng"
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="Password"
-                                    />
+                                    <select className="form-control form-select">
+                                        <option>Chim Non</option>
+                                        <option>Chim Chuyền Cành</option>
+                                        <option>Chim Trưởng Thành</option>
+                                    </select>
                                 </div>
                                 <div className="form-group">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="FullName"
-                                    />
+                                    <select className="form-control form-select">
+                                        <option>Chim Chích Chòe Than</option>
+                                        <option>Chim Chích Chòe Lửa</option>
+                                    </select>
                                 </div>
+                                <div className="form-group">
+                                    <select className="form-control form-select">
+                                        <option>Trống</option>
+                                        <option>Mái</option>
+                                    </select>
+                                </div>
+
+
                                 <div className="form-group text-right ">
                                     <button
                                         type="submit"
@@ -90,4 +98,4 @@ const StaffProfile = () => {
     )
 }
 
-export default StaffProfile
+export default BirdProfile

@@ -14,7 +14,8 @@ const AddStaffPage = () => {
                                 <StaffProfile />
                             </div>
                         </div>
-                        <div className="row">
+
+                        {/* <div className="row">
                             <div className="col-lg-12">
                                 <div className="card">
                                     <div className="card-header">
@@ -91,7 +92,8 @@ const AddStaffPage = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        
                     </div>
                 </div>
             </div>
