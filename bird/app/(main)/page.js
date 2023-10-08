@@ -132,19 +132,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* End section content */}
-        {/* start section footer */}
 
-        {/* End section footer */}
       </div>
-      {/* JQuery v3.5.1 */}
-      {/* popper js */}
-      {/* Bootstrap */}
-      {/* Moment */}
-      {/* Date Range Picker */}
-      {/* Datatable */}
-      {/* Chart js */}
-      {/* Main Custom JQuery */}
+
     </>
   );
 }
