@@ -6,12 +6,12 @@ const SideBar = () => {
       <nav className="navigation">
         <ul className="list-unstyled main-menu">
           <li className="has-submenu active">
-            <a href="index.html">
+            <a href="/">
               <i className="fas fa-th-large" />
               <span className="nav-label">Dashboard</span>
             </a>
           </li>
-          <li className="has-submenu">
+          {/* <li className="has-submenu">
             <a href="javascript:void()" className="has-arrow mm-collapsed">
               <i className="fa fa-table" />
               <span className="nav-label">Layouts</span>
@@ -25,66 +25,66 @@ const SideBar = () => {
                 <a href="index-rtl.html">RTL Dashboard</a>
               </li>
             </ul>
-          </li>
+          </li> */}
           <li className="has-submenu">
             <a href="javascript:void()" className="has-arrow mm-collapsed">
               <i className="fas fa-user-md" />
-              <span className="nav-label">Doctors</span>
+              <span className="nav-label">Nhân viên</span>
             </a>
             <ul className="list-unstyled mm-collapse">
               <li>
-                <a href="add-doctor.html">Add Doctor</a>
+                <a href="/add-staff">Thêm nhân viên</a>
               </li>
               <li>
-                <a href="doctor-list.html">All Doctors</a>
+                <a href="/staff">Tất cả nhân viên</a>
               </li>
-              <li>
+              {/* <li>
                 {" "}
                 <a href="doctor-profile.html">Doctors Profile</a>{" "}
-              </li>
+              </li> */}
             </ul>
           </li>
           <li className="has-submenu">
             <a href="javascript:void()" className="has-arrow mm-collapsed">
               <i className="fas fa-users" />
-              <span className="nav-label">Patients</span>
+              <span className="nav-label">Chích Chòe</span>
             </a>
             <ul className="list-unstyled mm-collapse">
               <li>
-                <a href="new-patient.html">New Patient</a>
+                <a href="/add-bird">Thêm chích Chòe</a>
               </li>
               <li>
-                <a href="all-patients.html">All Patients</a>
+                <a href="/bird">Tất Cả Chích Chòe</a>
               </li>
             </ul>
           </li>
-          <li className="has-submenu">
+          {/* <li className="has-submenu">
             <a href="new-appointment.html">
               <i className="fas fa-calendar-plus" />
               <span className="nav-label">Appointment</span>
             </a>
-          </li>
+          </li> */}
           <li className="has-submenu">
             <a href="javascript:void()" className="has-arrow mm-collapsed">
               <i className="fas fa-book-medical" />
-              <span className="nav-label">Prescriptions</span>
+              <span className="nav-label">Lồng chim</span>
             </a>
             <ul className="list-unstyled mm-collapse">
               <li>
-                <a href="new-prescription.html">New Prescription</a>
+                <a href="/add-cage">Thêm lồng</a>
               </li>
               <li>
-                <a href="all-prescriptions.html">All Prescriptions</a>
+                <a href="">Tất cả Lồng</a>
               </li>
             </ul>
           </li>
           <li className="has-submenu">
-            <a href="add-drug.html">
+            <a href="/cage-diagram">
               <i className="fas fa-pills" />
-              <span className="nav-label">Add Drug</span>
+              <span className="nav-label">Sơ đồ lồng</span>
             </a>
           </li>
-          <li className="has-submenu">
+          {/* <li className="has-submenu">
             <a href="javascript:void()" className="has-arrow mm-collapsed">
               <i className="fas fa-heartbeat" />
               <span className="nav-label">Tests</span>
@@ -97,14 +97,14 @@ const SideBar = () => {
                 <a href="all-tests.html">All Tests</a>
               </li>
             </ul>
-          </li>
+          </li> */}
           <li className="has-submenu">
-            <a href="calendar.html">
+            <a href="/meal">
               <i className="fas fa-calendar-alt" />
-              <span className="nav-label">calendar</span>
+              <span className="nav-label">Khẩu phần ăn</span>
             </a>
           </li>
-          <li className="has-submenu">
+          {/* <li className="has-submenu">
             <a href="reports.html">
               <i className="fas fa-chart-pie" />
               <span className="nav-label">Reports</span>
@@ -172,7 +172,7 @@ const SideBar = () => {
                 <a href="page-error-500.html">Error 500</a>
               </li>
             </ul>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div className="sidebar-widgets">
