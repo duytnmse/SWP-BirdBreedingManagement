@@ -83,7 +83,7 @@ const BirdProfile = () => {
                                         type="submit"
                                         className="btn btn-primary float-end"
                                     >
-                                        add doctor
+                                        Thêm Chích Chòe
                                     </button>
                                 </div>
 
