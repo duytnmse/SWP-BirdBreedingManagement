@@ -3,8 +3,8 @@ import React from 'react'
 const BirdProfile = () => {
     return (
         <div className="card">
-            <div className="card-header">
-                <h4 className="card-title">Thông Tin Chim</h4>
+            <div className="card-header ">
+                <h4 className="card-title ">Điền Thông Tin</h4>
             </div>
             <div className="card-body">
                 <div className="basic-form">
@@ -12,7 +12,7 @@ const BirdProfile = () => {
                         <div className="row">
                             <div className="col-xl-4">
                                 <div className="form-group row widget-3">
-                                    <div className="col-lg-12">
+                                    
                                         <div className="form-input">
                                             <label
                                                 className="labeltest"
@@ -35,7 +35,7 @@ const BirdProfile = () => {
                                                     src="#"
                                                     alt="img"
                                                 />
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -52,9 +52,10 @@ const BirdProfile = () => {
                               
                                 <div className="form-group">
                                     <input
-                                        type="number"
+                                        type="text"
                                         className="form-control"
-                                        placeholder="Cân Nặng"
+                                        placeholder="Weight(g)"
+                                        min="0"
                                     />
                                 </div>
                                 <div className="form-group">
@@ -83,7 +84,7 @@ const BirdProfile = () => {
                                         type="submit"
                                         className="btn btn-primary float-end"
                                     >
-                                        add doctor
+                                        Thêm Chích Chòe
                                     </button>
                                 </div>
 

@@ -14,7 +14,7 @@ const PageTitle = () => {
                         <a href="index.html">Home</a>
                     </li>
                     <li className="breadcrumb-item active">
-                        <a href="/new-patient.html">Danh Sách Chích Chòe</a>
+                        <a>Danh Sách Chích Chòe</a>
                     </li>
                 </ol>
             </div>

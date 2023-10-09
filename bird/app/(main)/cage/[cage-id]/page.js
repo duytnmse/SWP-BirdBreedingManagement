@@ -22,7 +22,10 @@ const page = () => {
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li className="breadcrumb-item active">
-                                    <a href="/cage/1">Thông tin lồng</a>
+                                    <a href="/cage">Tất Cả Lồng</a>
+                                </li>
+                                <li className="breadcrumb-item active">
+                                    <a>Thông tin lồng</a>
                                 </li>
                             </ol>
                         </div>

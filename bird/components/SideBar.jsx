@@ -74,7 +74,7 @@ const SideBar = () => {
                 <a href="/add-cage">Thêm lồng</a>
               </li>
               <li>
-                <a href="">Tất cả Lồng</a>
+                <a href="/cage">Tất cả Lồng</a>
               </li>
             </ul>
           </li>

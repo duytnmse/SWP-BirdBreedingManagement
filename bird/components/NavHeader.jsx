@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const NavHeader = () => {
   return (
@@ -6,17 +7,19 @@ const NavHeader = () => {
     <div className="brand-logo">
       <a href="index.html">
         {" "}
-        <img
+        <Image
           className="logo-tabib"
-          src="assets/images/download.png"
+          src="/assets/images/download.png"
           alt=""
+          height={40} width={50}
         />
       </a>
       <a href="index.html">
-        <img
+        <Image
           className="brand-title"
-          src="assets/images/logo.png"
+          src="/assets/images/logo.png"
           alt=""
+          height={30} width={150}
         />
       </a>
     </div>

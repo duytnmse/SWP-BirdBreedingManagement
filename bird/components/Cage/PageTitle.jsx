@@ -5,7 +5,7 @@ const PageTilte = () => {
         <div className="row page-titles mx-0">
             <div className="col-sm-6 p-md-0">
                 <div className="welcome-text">
-                    <h4 className="text-primary">Tất Cả Nhân Viên</h4>
+                    <h4 className="text-primary">Danh Sách Lồng</h4>
                 </div>
             </div>
             <div className="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
@@ -14,7 +14,7 @@ const PageTilte = () => {
                         <a href="index.html">Home</a>
                     </li>
                     <li className="breadcrumb-item active">
-                        <a>Tất Cả Nhân Viên</a>
+                        <a>Danh Sách Lồng</a>
                     </li>
                 </ol>
             </div>

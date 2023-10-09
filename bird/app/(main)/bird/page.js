@@ -27,9 +27,9 @@ const page = () => {
                             Thêm Chích Chòe
                           </a>
                         </div>
-                      </div> 
+                      </div>
                     </div>
-                    <Table/>
+                    <Table />
                   </div>
                 </div>
               </div>
