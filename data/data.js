@@ -224,6 +224,7 @@ export const cages = [
     },
     "available" : false
 },
+
 {
     "id": "A03",
     "cagetype_id": 2,
@@ -274,7 +275,7 @@ export const cages = [
         "exp_adultbird_date" : "30/12/2023",
         "act_adultbird_date" : "30/12/2023",
         "Breeding_Result": {
-            "total_egg": 5,
+            "total_egg": 8,
             "fail_egg": 1, 
         },
         "cage_id" : "A03",
@@ -693,4 +694,5 @@ export const cages = [
     },
     "available" : false
 }, 
+
 ]
