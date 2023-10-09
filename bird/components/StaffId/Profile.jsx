@@ -71,6 +71,16 @@ const Profile = () => {
                 </div>
 
                 <div className="form-group">
+                  <label>Created By:</label>
+                  <div className="static-data">Mai Thị Khôi</div>
+                </div>
+
+                <div className="form-group">
+                  <label>Created Date:</label>
+                  <div className="static-data">12/09/2022</div>
+                </div>
+
+                <div className="form-group">
                   <label>Role:</label>
                   <div className="static-data">Nhân viên</div>
                 </div>
