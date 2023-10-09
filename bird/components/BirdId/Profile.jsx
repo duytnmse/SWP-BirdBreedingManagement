@@ -47,7 +47,7 @@ const Profile = () => {
               <div className="col-xl-8 ">
                 <div className="form-group">
                   <label>ID:</label>
-                  <div className="static-data">A01</div>
+                  <div className="static-data">A01</div>*
                 </div>
 
                 <div className="form-group">
@@ -88,6 +88,16 @@ const Profile = () => {
                 <div className="form-group">
                   <label>Mutation(%):</label>
                   <div className="static-data">5</div>
+                </div>
+
+                <div className="form-group">
+                  <label>Mutation(Note):</label>
+                  <div className="static-data">Độ dài của đuôi dài bình thường</div>
+                </div>
+
+                <div className="form-group">
+                  <label>Feather(color):</label>
+                  <div className="static-data">Lông màu trắng</div>
                 </div>
 
                 <div className="form-group">

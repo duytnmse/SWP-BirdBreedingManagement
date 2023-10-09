@@ -91,10 +91,35 @@ const page = () => {
                                         <div className="card m-t-30">
                                             <div className="card-body">
                                                 <p>
-                                                    SỐ TRỨNG ĐÃ ĐẺ : 6 <br />
-                                                    SỐ CHÍCH CHÒE : 5 <br />
-                                                    GIAI ĐOẠN HIỆN TẠI: CHIM NON <br />
-                                                    DỰ KIẾN GIAI ĐOẠN KẾ : 8/10/2023
+                                                    <div >
+                                                        <div className='col-md-6'>
+                                                            <div className="form-group">
+                                                                <label>SỐ TRỨNG ĐÃ ĐẺ :</label>
+                                                                <div className="static-data">6</div>
+                                                            </div>
+
+                                                            <div className="form-group">
+                                                                <label>SỐ CHÍCH CHÒE :</label>
+                                                                <div className="static-data">5</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className='col-md-6'>
+
+                                                            <div className="form-group">
+                                                                <label>GIAI ĐOẠN HIỆN TẠI :</label>
+                                                                <div className="static-data">CHIM NON </div>
+                                                            </div>
+
+                                                            <div className="form-group">
+                                                                <label>DỰ KIẾN GIAI ĐOẠN KẾ :</label>
+                                                                <div className="static-data">8/10/2023</div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
                                                 </p>
                                             </div>
                                         </div>

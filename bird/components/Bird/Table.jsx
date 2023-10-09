@@ -14,8 +14,8 @@ const Table = () => {
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <a href='/bird/id'><th scope="row">A01</th></a>
+      <tr>   
+        <td><a href={`/bird/id`} >01 </a></td>
         <td>Chích chòe Than</td>
         <td>Trống</td>
         <td>08/09/2023</td>

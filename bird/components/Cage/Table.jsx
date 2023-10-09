@@ -15,7 +15,7 @@ const Table = () => {
     </thead>
     <tbody>
       <tr>
-        <a href='/cage/id'><th scope="row">C01</th></a>
+      <th> <a href='/cage/id'>C01 </a></th>
         <td>Đơn</td>
         <td>Khu B</td>
         <td>....</td>

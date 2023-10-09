@@ -15,7 +15,7 @@ const Table = () => {
     </thead>
     <tbody>
       <tr>
-        <a href='/staff/id'><th scope="row">001</th></a>
+      <th ><a href='/staff/id'>001</a></th>
         <td>MinhLu</td>
         <td>Minhlu@gmail.com</td>
         <td>Hoàng Minh Lu</td>
