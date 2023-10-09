@@ -4,7 +4,7 @@ const StaffProfile = () => {
     return (
         <div className="card">
             <div className="card-header">
-                <h4 className="card-title">Thông tin nhân viên</h4>
+                <h4 className="card-title">Điền Thông Tin </h4>
             </div>
             <div className="card-body">
                 <div className="basic-form">
@@ -12,7 +12,7 @@ const StaffProfile = () => {
                         <div className="row">
                             <div className="col-xl-4">
                                 <div className="form-group row widget-3">
-                                    <div className="col-lg-12">
+                                    
                                         <div className="form-input">
                                             <label
                                                 className="labeltest"
@@ -36,7 +36,7 @@ const StaffProfile = () => {
                                                     alt="img"
                                                 />
                                             </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ const StaffProfile = () => {
                                         type="submit"
                                         className="btn btn-primary float-end"
                                     >
-                                        add doctor
+                                        Thêm Nhân Viên
                                     </button>
                                 </div>
 

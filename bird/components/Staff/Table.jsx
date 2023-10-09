@@ -15,11 +15,11 @@ const Table = () => {
     </thead>
     <tbody>
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
+        <a href='/staff/id'><th scope="row">001</th></a>
+        <td>MinhLu</td>
+        <td>Minhlu@gmail.com</td>
+        <td>Hoàng Minh Lu</td>
+        <td>Nhân viên</td>
       </tr>
       
     </tbody>

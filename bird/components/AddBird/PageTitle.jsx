@@ -14,7 +14,7 @@ const PageTilte = () => {
                         <a href="index.html">Home</a>
                     </li>
                     <li className="breadcrumb-item active">
-                        <a href="/add-doctor.html">Thêm Thông Tin Chim</a>
+                        <a>Thêm Thông Tin Chim</a>
                     </li>
                 </ol>
             </div>
