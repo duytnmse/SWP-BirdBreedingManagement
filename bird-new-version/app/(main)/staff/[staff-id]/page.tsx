@@ -1,5 +1,6 @@
-import PageTitle from '@/components/BirdId/PageTitle'
-import Profile from '@/components/BirdId/Profile'
+
+import PageTitle from '@/components/StaffId/PageTitle'
+import Profile from '@/components/StaffId/Profile'
 import React from 'react'
 
 const page = () => {
@@ -9,13 +10,7 @@ const page = () => {
         <div className="warper container-fluid">
           <div className="all-patients main_container">
             <PageTitle/>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="card">
-                  <Profile />
-                </div>
-              </div>
-            </div>
+            <Profile/>
           </div>
         </div>
       </div>

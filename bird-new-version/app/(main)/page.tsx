@@ -15,7 +15,7 @@ export default function Home() {
       <div id="main-wrapper" className="show">
         <div className="content-body">
           <div className="warper container-fluid">
-            <BreadCrum title= "2" name="someone here" content="Test title" />
+            <BreadCrum title="Good morning" name="someone here" content="Test title" />
             <div className="new-patients main_container">
 
               <BoxList />
