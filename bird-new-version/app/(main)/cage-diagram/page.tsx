@@ -18,10 +18,10 @@ const page = () => {
                                 <div className="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                                     <ol className="breadcrumb">
                                         <li className="breadcrumb-item">
-                                            <a href="index.html">Home</a>
+                                            <a href="/">DashBoard</a>
                                         </li>
                                         <li className="breadcrumb-item active">
-                                            <a href="/doctor-list.html">Doctors List</a>
+                                            <a href="/cage-diagram">Sơ đồ lồng</a>
                                         </li>
                                     </ol>
                                 </div>

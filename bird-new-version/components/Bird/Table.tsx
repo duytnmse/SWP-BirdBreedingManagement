@@ -41,12 +41,14 @@ const data: Payment[] = [
     id: "A01",
     egg: 6,
     sex: "trống",
-    mutation: 5,
-
-
-
+    mutation: 0.1,
   },
-
+  {
+    id: "A02",
+    egg: 1,
+    sex: "mái",
+    mutation: 1,
+  },
 ]
 
 export type Payment = {
@@ -149,8 +151,8 @@ export const columns: ColumnDef<Payment>[] = [
               Copy payment ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+            <a href="/bird/id"><DropdownMenuItem>View details</DropdownMenuItem></a>
+            <DropdownMenuItem>View </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       )

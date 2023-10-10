@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const BirdCard = () => {
@@ -13,12 +14,12 @@ const BirdCard = () => {
                                         alt="image"
                                         className="rounded-circle shadow"
                                         width={90}
-                                        src="https://via.placeholder.com/128/f8f8f8/2b2b2b"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/9/98/Copsychus_malabaricus_male_-_Khao_Yai.jpg"
                                     />
                                     <div className="pulse-css" />
                                 </div>
                                 <div className="media-body">
-                                    <h2 className="mb-2">ID vòng: B001</h2>
+                                    <Link href='/bird/id'><h2 className="mb-2">ID vòng: B001</h2></Link>
                                     <p className="mb-md-2 mb-sm-4 mb-2">Loại : chích chòe lửa</p>
                                     <p className="mb-md-2 mb-sm-4 mb-2">Giới tính : Trống</p>
 

@@ -13,10 +13,11 @@ const BabyBirdCard = () => {
                             alt="img"
                         />
                         <div className="media-body">
-                            <a href="#">
-                                <h4 className="mt-0 mb-1">Pt. Airi Satou </h4>
+                            <a href="/bird/id">
+                                <h4 className="mt-0 mb-1">ID vòng : B011  </h4>
                             </a>
-                            <p className="mb-0">Rabat, Maroc</p>
+                            <p className="mb-0">Chích Chòe Lửa mái</p>
+                            <p className="mb-0">Giống: mái</p>
                         </div>
                     </div>
                 </div>
