@@ -1,28 +1,28 @@
 
 interface StarReview {
-    crowIcons : number,
-    eggIcons : number
+    crowIcons: number,
+    eggIcons: number
 }
 
 interface Bird {
-    id : number,
-    name : string,
-    specialty : string,
-    imageSrc : string,
-    starReview : StarReview,
+    id: number,
+    name: string,
+    specialty: string,
+    imageSrc: string,
+    starReview: StarReview,
     process: boolean
-} 
+}
 
 
-export const birds : Bird[] = [
+export const birds: Bird[] = [
     {
         "id": 1,
         "name": "Dr. Michael Sullivan",
         "specialty": "Endocrinologist",
         "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
         "starReview": {
-            "crowIcons": 3,
-            "eggIcons": 1
+            "crowIcons": 6,
+            "eggIcons": 2
         },
         "process": true,
     },
@@ -32,7 +32,7 @@ export const birds : Bird[] = [
         "specialty": "Cardiologist",
         "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
         "starReview": {
-            "crowIcons": 4,
+            "crowIcons": 0,
             "eggIcons": 0
         },
         "process": false
@@ -79,8 +79,8 @@ export const birds : Bird[] = [
         "specialty": "Pediatrician",
         "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
         "starReview": {
-            "crowIcons": 5,
-            "eggIcons": 2
+            "crowIcons": 0,
+            "eggIcons": 0
         },
         "process": false
 
@@ -91,8 +91,8 @@ export const birds : Bird[] = [
         "specialty": "Pediatrician",
         "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
         "starReview": {
-            "crowIcons": 5,
-            "eggIcons": 2
+            "crowIcons": 0,
+            "eggIcons": 0
         },
         "process": false
 
@@ -103,8 +103,8 @@ export const birds : Bird[] = [
         "specialty": "Pediatrician",
         "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
         "starReview": {
-            "crowIcons": 5,
-            "eggIcons": 2
+            "crowIcons": 0,
+            "eggIcons": 0
         },
         "process": false
 
@@ -115,8 +115,8 @@ export const birds : Bird[] = [
         "specialty": "Pediatrician",
         "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
         "starReview": {
-            "crowIcons": 5,
-            "eggIcons": 2
+            "crowIcons": 0,
+            "eggIcons": 0
         },
         "process": false
 

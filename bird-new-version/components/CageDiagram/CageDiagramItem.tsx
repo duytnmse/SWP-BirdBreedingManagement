@@ -13,16 +13,21 @@ interface CageDiagramItemProps {
     name: string,
     specialty: string,
     imageSrc: string,
-    starReview : StarReview,
+    starReview: StarReview,
     process?: boolean
 }
 
-const CageDiagramItem = ({ id, name, specialty, imageSrc, starReview} : CageDiagramItemProps) => {
+const CageDiagramItem = ({ id, name, specialty, imageSrc, starReview }: CageDiagramItemProps) => {
 
 
 
     const crowIconsCount = starReview?.crowIcons || 0;
     const eggIconsCount = starReview?.eggIcons || 0;
+    const updatedImageSrc =
+        crowIconsCount === 0 && eggIconsCount === 0
+            ? 'https://i.vimeocdn.com/portrait/1274237_640x640'// Replace with the path to your empty image
+            : '/assets/images/logo-chim.png';
+
 
     // Create an array of the specified length for crow and egg icons
     const crowIconsArray = Array.from({ length: crowIconsCount }, (_, index) => (
@@ -42,7 +47,7 @@ const CageDiagramItem = ({ id, name, specialty, imageSrc, starReview} : CageDiag
                     <div className="media">
                         <img
                             alt="image"
-                            src={imageSrc}
+                            src={updatedImageSrc}
                         />
                     </div>
                     <div className="media-body">
