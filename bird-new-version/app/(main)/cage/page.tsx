@@ -29,7 +29,7 @@ const AddStaffPage = () => {
                             </div>
                           </div>
                         </div>
-                        <Table />
+                        <div className='container'> <Table /></div>
                       </div>
                     </div>
                   </div>

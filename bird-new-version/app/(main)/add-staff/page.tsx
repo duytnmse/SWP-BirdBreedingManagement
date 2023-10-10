@@ -11,8 +11,6 @@ const AddStaffPage = () => {
                         <PageTitle />
 
                         <StaffProfile />
-
-
                     </div>
                 </div>
             </div>

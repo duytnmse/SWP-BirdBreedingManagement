@@ -1,9 +1,13 @@
 import BreadCrum from "@/components/BreadCrum";
-import BoxList from "@/components/DashBoard/BoxList";
-import ColumnChart from "@/components/DashBoard/ColumnChart";
-import NewBirdList from "@/components/DashBoard/NewBirdList";
-import PieChart from "@/components/DashBoard/PieChart";
-import WaveChart from "@/components/DashBoard/WaveChart";
+
+
+
+
+import BoxList from "@/components/Dashboard/BoxList";
+import ColumnChart from "@/components/Dashboard/ColumnChart";
+import NewBirdList from "@/components/Dashboard/NewBirdList";
+import PieChart from "@/components/Dashboard/PieChart";
+import WaveChart from "@/components/Dashboard/WaveChart";
 import Header from "@/components/Header";
 import NavHeader from "@/components/NavHeader";
 import SideBar from "@/components/SideBar";
@@ -18,27 +22,27 @@ export default function Home() {
             <BreadCrum title="Good morning" name="someone here" content="Test title" />
             <div className="new-patients main_container">
 
-              <BoxList />
+              <BoxList/>
 
               <div className="row">
                 <div className="col-lg-8">
 
-                  <WaveChart />
+                  <WaveChart/>
 
                 </div>
                 <div className="col-lg-4">
 
-                  <NewBirdList />
+                  <NewBirdList/>
 
                 </div>
                 <div className="col-lg-6">
 
-                  <PieChart />
+                  <PieChart/>
 
                 </div>
                 <div className="col-lg-6">
 
-                  <ColumnChart />
+                  <ColumnChart/>
 
                 </div>
               </div>
