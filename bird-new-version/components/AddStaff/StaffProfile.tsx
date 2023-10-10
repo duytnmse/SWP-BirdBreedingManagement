@@ -70,6 +70,12 @@ const StaffProfile = () => {
                                         placeholder="FullName"
                                     />
                                 </div>
+                                <div className="form-group">
+                                    <select className="form-control form-select">
+                                        <option>Nhân Viên</option>
+                                        <option>Manage</option>                                     
+                                    </select>
+                                </div>
                                 <div className="form-group text-right ">
                                     <button
                                         type="submit"

@@ -229,7 +229,7 @@ export function Teaching() {
   })
 
   return (
-    <div className="w-[50%] ml-10 bg-red-500">
+    <div className="">
       <div className="flex items-center py-4">
         <Input
           placeholder="Filter emails..."
