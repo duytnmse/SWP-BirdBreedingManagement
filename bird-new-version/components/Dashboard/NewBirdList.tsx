@@ -19,8 +19,8 @@ const NewBirdList = () => {
                                     />
                                 </div>
                                 <div className="media-body">
-                                    <h4 className="mb-0">Airi Satou</h4>
-                                    <span>Maried, Rabat</span>
+                                    <h4 className="mb-0">L011</h4>
+                                    <span>Non</span>
                                 </div>
                             </div>
                             <button
@@ -41,8 +41,8 @@ const NewBirdList = () => {
                                     />
                                 </div>
                                 <div className="media-body">
-                                    <h4 className="mb-0">Airi Satou</h4>
-                                    <span>Maried, Rabat</span>
+                                    <h4 className="mb-0">L012</h4>
+                                    <span>Non</span>
                                 </div>
                             </div>
                             <button
@@ -63,8 +63,8 @@ const NewBirdList = () => {
                                     />
                                 </div>
                                 <div className="media-body">
-                                    <h4 className="mb-0">Airi Satou</h4>
-                                    <span>Maried, Rabat</span>
+                                    <h4 className="mb-0">L013</h4>
+                                    <span>Trưởng thành</span>
                                 </div>
                             </div>
                             <button
@@ -85,8 +85,8 @@ const NewBirdList = () => {
                                     />
                                 </div>
                                 <div className="media-body">
-                                    <h4 className="mb-0">Airi Satou</h4>
-                                    <span>Maried, Rabat</span>
+                                    <h4 className="mb-0">L014</h4>
+                                    <span>Chuyền</span>
                                 </div>
                             </div>
                             <button

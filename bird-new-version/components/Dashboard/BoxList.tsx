@@ -11,8 +11,8 @@ const BoxList = () => {
                                 <i className="fas fa-calendar-check fa-2x" />
                             </span>
                             <div className="media-body">
-                                <span className="text-white">Earnings</span>
-                                <h3 className="mb-0 text-white">7699</h3>
+                                <span className="text-white">Birds</span>
+                                <h3 className="mb-0 text-white">1000</h3>
                             </div>
                         </div>
                     </div>
@@ -26,8 +26,8 @@ const BoxList = () => {
                                 <i className="fas fa-user-nurse fa-2x" />
                             </span>
                             <div className="media-body">
-                                <span className="text-white">Patients</span>
-                                <h3 className="mb-0 text-white">400</h3>
+                                <span className="text-white">Cage</span>
+                                <h3 className="mb-0 text-white">300</h3>
                             </div>
                         </div>
                     </div>
@@ -42,8 +42,8 @@ const BoxList = () => {
                                 <i className="fas fa-user-plus fa-2x" />
                             </span>
                             <div className="media-body">
-                                <span className="text-white">Appointments</span>
-                                <h3 className="mb-0 text-white">1360</h3>
+                                <span className="text-white">Mutation birds</span>
+                                <h3 className="mb-0 text-white">30</h3>
                             </div>
                         </div>
                     </div>
@@ -58,8 +58,8 @@ const BoxList = () => {
                                 <i className="fas fa-database fa-2x" />
                             </span>
                             <div className="media-body">
-                                <span className="text-white">Total Revenue</span>
-                                <h3 className="mb-0 text-white">$6500</h3>
+                                <span className="text-white">Percentage of success eggs</span>
+                                <h3 className="mb-0 text-white">92%</h3>
                             </div>
                         </div>
                     </div>
