@@ -176,22 +176,7 @@ const SideBar = () => {
         </ul>
       </nav>
       <div className="sidebar-widgets">
-        <div className="top-sidebar box-shadow mx-25 m-b-30 p-b-20 text-center">
-          <a href="new-appointment.html">
-            <img
-              src="https://via.placeholder.com/215/f8f8f8/2b2b2b"
-              className="side-img"
-              alt="img"
-            />
-          </a>
-          <a href="#">
-            <h4 className="text-primary mb-0">Make an Appointments</h4>
-          </a>
-        </div>
-        <div className="copyright text-center">
-          <p className="mb-0"> Tabib Dashboard</p>
-          <p className="mb-0"> © 2022 </p>
-        </div>
+
       </div>
     </aside>
   );
