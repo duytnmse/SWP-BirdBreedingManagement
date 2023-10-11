@@ -12,16 +12,16 @@ const Header = () => {
           </div>
           <div className="left-header content-header__menu">
             <ul className="list-unstyled">
-              <li className="nav-link btn">
+              {/* <li className="nav-link btn">
                 <a href="#">
                   <i className="far fa-calendar-check" />{" "}
                   <span> Make an appointment</span>
                 </a>
-              </li>
+              </li> */}
               <li className="nav-link btn">
-                <a href="#">
+                <a href="/cr-process">
                   <i className="far fa-file-alt" />{" "}
-                  <span> Write a prescription</span>
+                  <span> Tạo Quá Trình</span>
                 </a>
               </li>
             </ul>

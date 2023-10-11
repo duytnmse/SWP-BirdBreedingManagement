@@ -169,12 +169,14 @@ const page = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-6 col-lg-4">
+                        <div className="col-md-4 col-lg-4">
                             <NotificationCard />
                         </div>
-                        <div className="col-md-6 col-lg-4">
+                        <div className="col-md-4 col-lg-4">
                             <ProcessCard />
                         </div>
+                     
+                        
                     </div>
                 </div>
             </div>
