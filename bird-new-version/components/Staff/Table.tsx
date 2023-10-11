@@ -43,6 +43,75 @@ const data: Payment[] = [
     role:"Nhân viên",
     email: "ken99@yahoo.com",
   },
+  {
+    id: "A02",
+    username: "alice",
+    role: "Quản lý",
+    email: "alice123@gmail.com",
+    },
+    
+    {
+    id: "A03",
+    username: "bob",
+    role: "Nhân viên",
+    email: "bob89@hotmail.com",
+    },
+    
+    {
+    id: "A04",
+    username: "jane",
+    role: "Nhân viên",
+    email: "jane456@gmail.com",
+    },
+    
+    {
+    id: "A05",
+    username: "mark",
+    role: "Quản lý",
+    email: "mark77@yahoo.com",
+    },
+    
+    {
+    id: "A06",
+    username: "sara",
+    role: "Nhân viên",
+    email: "sara55@gmail.com",
+    },
+    
+    {
+    id: "A07",
+    username: "mike",
+    role: "Nhân viên",
+    email: "mike22@hotmail.com",
+    },
+    
+    {
+    id: "A08",
+    username: "emily",
+    role: "Quản lý",
+    email: "emily34@yahoo.com",
+    },
+    
+    {
+    id: "A09",
+    username: "john",
+    role: "Nhân viên",
+    email: "john66@gmail.com",
+    },
+    
+    {
+    id: "A10",
+    username: "lisa",
+    role: "Quản lý",
+    email: "lisa99@gmail.com",
+    },
+    
+    {
+    id: "A11",
+    username: "david",
+    role: "Nhân viên",
+    email: "david44@hotmail.com",
+    }
 
 ]
 

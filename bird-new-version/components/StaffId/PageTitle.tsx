@@ -11,7 +11,7 @@ const PageTitle = () => {
             <div className="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li className="breadcrumb-item active">
                         <a href='/staff'>Danh Sách Nhân Viên</a>

@@ -2,8 +2,7 @@ import React from 'react'
 import BirdChild from '../BirdFamilyTree/BirdChild'
 import MainGeneration from '../BirdFamilyTree/MainGeneration'
 import Parent from '../BirdFamilyTree/Parent'
-import NotificationCard from '../CageId/NotificationCard'
-import ProcessCard from '../CageId/ProcessCard'
+
 
 const Profile = () => {
   return (

@@ -44,9 +44,76 @@ const data: Payment[] = [
     available: "true",
     quantity:8
 
-
-
   },
+  {
+    id: "A02",
+    location: 2,
+    available: "true",
+    quantity: 10
+    },
+    
+    {
+    id: "A03",
+    location: 3,
+    available: "true",
+    quantity: 6
+    },
+    
+    {
+    id: "A04",
+    location: 4,
+    available: "true",
+    quantity: 12
+    },
+    
+    {
+    id: "A05",
+    location: 5,
+    available: "true",
+    quantity: 5
+    },
+    
+    {
+    id: "A06",
+    location: 6,
+    available: "true",
+    quantity: 9
+    },
+    
+    {
+    id: "A07",
+    location: 7,
+    available: "true",
+    quantity: 7
+    },
+    
+    {
+    id: "A08",
+    location: 8,
+    available: "true",
+    quantity: 11
+    },
+    
+    {
+    id: "A09",
+    location: 9,
+    available: "true",
+    quantity: 8
+    },
+    
+    {
+    id: "A10",
+    location: 10,
+    available: "true",
+    quantity: 4
+    },
+    
+    {
+    id: "A11",
+    location: 11,
+    available: "true",
+    quantity: 15
+    }
 
 ]
 

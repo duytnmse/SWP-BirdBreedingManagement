@@ -67,7 +67,7 @@ const CageProfile = () => {
                                         type="submit"
                                         className="btn btn-primary float-end"
                                     >
-                                        Thêm Nhân Viên
+                                        Thêm Lồng
                                     </button>
                                 </div>
                             </div>

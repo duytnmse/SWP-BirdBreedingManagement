@@ -1,6 +1,6 @@
 import PageTitle from '@/components/BirdId/PageTitle'
 import Profile from '@/components/BirdId/Profile'
-import NavHeader from '@/components/NavHeader'
+
 import React from 'react'
 
 const page = () => {

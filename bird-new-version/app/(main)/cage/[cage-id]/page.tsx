@@ -3,6 +3,7 @@ import BirdCard from '@/components/CageId/BirdCard'
 import NotificationCard from '@/components/CageId/NotificationCard'
 import ProcessCard from '@/components/CageId/ProcessCard'
 import TabStaff from '@/components/CageId/TabStaff'
+import Table from "@/components/Bird/Table";
 import React from 'react'
 
 const page = () => {
@@ -19,7 +20,7 @@ const page = () => {
                         <div className="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                             <ol className="breadcrumb">
                                 <li className="breadcrumb-item">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                 </li>
                                 <li className="breadcrumb-item active">
                                     <a href="/cage">Tất Cả Lồng</a>
@@ -49,7 +50,7 @@ const page = () => {
                                             aria-controls="home"
                                             aria-selected="true"
                                         >
-                                            THÔNG TIN QUÁ TRÌNH
+                                            Thông Tin Quá Trình
                                         </button>
                                     </li>
                                     <li className="nav-item col-md-4" role="presentation">
@@ -91,10 +92,30 @@ const page = () => {
                                         <div className="card m-t-30">
                                             <div className="card-body">
                                                 <p>
-                                                    SỐ TRỨNG ĐÃ ĐẺ : 6 <br />
-                                                    SỐ CHÍCH CHÒE : 5 <br />
-                                                    GIAI ĐOẠN HIỆN TẠI: CHIM NON <br />
-                                                    DỰ KIẾN GIAI ĐOẠN KẾ : 8/10/2023
+
+                                                    <div className="flex justify-between items-center mb-2.5">
+                                                        <label className='basis-[30%]'>SỐ TRỨNG ĐÃ ĐẺ :</label>
+                                                        <div className="grow pl-2.5">6</div>
+                                                    </div>
+
+                                                    <div className="flex justify-between items-center mb-2.5">
+                                                        <label className='basis-[30%]'>SỐ CHÍCH CHÒE :</label>
+                                                        <div className="grow pl-2.5">5</div>
+                                                    </div>
+
+                                                    <div className="flex justify-between items-center mb-2.5">
+                                                        <label className='basis-[30%]'>GIAI ĐOẠN HIỆN TẠI:</label>
+                                                        <div className="grow pl-2.5">CHIM NON</div>
+                                                    </div>
+
+                                                    <div className="flex justify-between items-center mb-2.5">
+                                                        <label className='basis-[30%]'>DỰ KIẾN GIAI ĐOẠN KẾ :</label>
+                                                        <div className="grow pl-2.5">8/10/2023</div>
+                                                    </div>
+                                                    
+                                                      <br />
+                                                    
+                                                     
                                                 </p>
                                             </div>
                                         </div>
@@ -138,6 +159,7 @@ const page = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="container"><Table /></div>
                                 <div className="card-body">
                                     <div className="table-responsive">
                                         {/* table here */}

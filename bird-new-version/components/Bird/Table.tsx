@@ -40,12 +40,90 @@ const data: Payment[] = [
   {
     id: "A01",
     egg: 6,
-    sex: "trống",
+    sex: "Trống",
+    type: "Chích Chòe Than",
     mutation: 5,
 
-
-
   },
+  {
+    id: "A02",
+    egg: 4,
+    sex: "Trống",
+    type: "Chích Chòe Lửa",
+    mutation: 3,
+    },
+    
+    {
+    id: "A03",
+    egg: 5,
+    sex: "Mái",
+    type: "Chích Chòe Than",
+    mutation: 2,
+    },
+    
+    {
+    id: "A04",
+    egg: 6,
+    sex: "Trống",
+    type: "Chích Chòe Lửa",
+    mutation: 4,
+    },
+    
+    {
+    id: "A05",
+    egg: 3,
+    sex: "Trống",
+    type: "Chích Chòe Than",
+    mutation: 1,
+    },
+    
+    {
+    id: "A06",
+    egg: 5,
+    sex: "Mái",
+    type: "Chích Chòe Lửa",
+    mutation: 2,
+    },
+    
+    {
+    id: "A07",
+    egg: 4,
+    sex: "Trống",
+    type: "Chích Chòe Lửa",
+    mutation: 3,
+    },
+    
+    {
+    id: "A08",
+    egg: 3,
+    sex: "Mái",
+    type: "Chích Chòe Than",
+    mutation: 1,
+    },
+    
+    {
+    id: "A09",
+    egg: 6,
+    sex: "Trống",
+    type: "Chích Chòe Lửa",
+    mutation: 5,
+    },
+    
+    {
+    id: "A10",
+    egg: 4,
+    sex: "Mái",
+    type: "Chích Chòe Than",
+    mutation: 2,
+    },
+    
+    {
+    id: "A11",
+    egg: 5,
+    sex: "Trống",
+    type: "Chích Chòe Lửa",
+    mutation: 4,
+    }
 
 ]
 
@@ -53,6 +131,7 @@ export type Payment = {
   id: string
   egg: number
   sex: string
+  type: string
   mutation: number
 
 
@@ -87,6 +166,15 @@ export const columns: ColumnDef<Payment>[] = [
       )
     },
     cell: ({ row }) => <a href="/bird/id"> <div>{row.getValue("id")}</div></a>,
+  },
+  {
+    accessorKey: "type",
+    header: () => {
+      return (
+        <div>Type</div>
+      )
+    },
+    cell: ({ row }) =>  <div>{row.getValue("type")}</div>,
   },
   {
     accessorKey: "sex",
