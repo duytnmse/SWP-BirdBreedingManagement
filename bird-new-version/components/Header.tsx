@@ -12,6 +12,22 @@ const Header = () => {
           </div>
           <div className="left-header content-header__menu">
             <ul className="list-unstyled">
+              <li className="nav-link btn">
+                <a href="#">
+                  <i className="far fa-calendar-check" />{" "}
+                  <span> Make an appointment</span>
+                </a>
+              </li>
+              <li className="nav-link btn">
+                <a href="#">
+                  <i className="far fa-file-alt" />{" "}
+                  <span> Write a prescription</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="left-header content-header__menu">
+            <ul className="list-unstyled">
             </ul>
           </div>
         </div>

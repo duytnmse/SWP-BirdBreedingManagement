@@ -14,29 +14,29 @@ const PieChart = () => {
                     <div className="col-lg-10">
                         <ul className="d-flex justify-content-between m-t-30">
                             <li className="content-widget text-center">
-                                <p className="mb-0 fs-14 text-muted">Stroke</p>
+                                <p className="mb-0 fs-14 text-muted">Trưởng thành</p>
                                 <h4 className="mb-0 fs-20 text-dark-gray">
-                                    8952
+                                    639
                                 </h4>
                             </li>
                             <li className="content-widget text-center">
-                                <p className="mb-0 fs-14 text-muted">Diabetes</p>
+                                <p className="mb-0 fs-14 text-muted">Chuyền</p>
                                 <h4 className="mb-0 fs-20 text-dark-gray">
-                                    7458
+                                    285
                                 </h4>
                             </li>
                             <li className="content-widget text-center">
-                                <p className="mb-0 fs-14 text-muted">Cirrhosis</p>
+                                <p className="mb-0 fs-14 text-muted">Non</p>
                                 <h4 className="mb-0 fs-20 text-dark-gray">
-                                    3254
+                                    147
                                 </h4>
                             </li>
                             <li className="content-widget text-center">
                                 <p className="mb-0 fs-14 text-muted">
-                                    Tuberculosis
+                                    Trứng
                                 </p>
                                 <h4 className="mb-0 fs-20 text-dark-gray">
-                                    3254
+                                    360
                                 </h4>
                             </li>
                         </ul>

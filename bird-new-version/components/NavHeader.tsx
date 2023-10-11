@@ -4,7 +4,7 @@ const NavHeader = () => {
   return (
     <div className="nav-header">
     <div className="brand-logo">
-      <a href="index.html">
+      <a href="/">
         {" "}
         <img
           className="logo-tabib"
@@ -12,9 +12,9 @@ const NavHeader = () => {
           alt=""
         />
       </a>
-      <a href="index.html">
+      <a href="/">
         <img
-          className="brand-title"
+          className="brand-title" style={{ width: "200px", height: "50px" }}
           src="assets/images/logo.png"
           alt=""
         />
