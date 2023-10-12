@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
- function AddEgg() {
+ function AddEggForm() {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -67,4 +67,4 @@ import { Label } from "@/components/ui/label"
   )
 }
 
-export default AddEgg
+export default AddEggForm

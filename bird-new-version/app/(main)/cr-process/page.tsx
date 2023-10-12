@@ -1,3 +1,4 @@
+import BreadScrum from '@/components/BreadScrum'
 import DropSelect from '@/components/Cr-Process/DropSelect'
 import Table from '@/components/Cr-Process/Table'
 import React from 'react'
@@ -10,6 +11,7 @@ const page = () => {
                 <div className="content-body">
                     <div className="warper container-fluid">
                         <div className="all-patients main_container">
+                        <BreadScrum title='Tạo Quá Tình' subRouteTitle='cr-process' subTitle1='Tạo Quá Tình'/>
 
                             <div className="row">
                                 <div className="col-lg-12">

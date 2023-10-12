@@ -1,8 +1,5 @@
-import BreadCrum from "@/components/BreadCrum";
 
-
-
-
+import BreadScrum from "@/components/BreadScrum";
 import BoxList from "@/components/Dashboard/BoxList";
 import ColumnChart from "@/components/Dashboard/ColumnChart";
 import NewBirdList from "@/components/Dashboard/NewBirdList";
@@ -19,7 +16,11 @@ export default function Home() {
       <div id="main-wrapper" className="show">
         <div className="content-body">
           <div className="warper container-fluid">
-            <BreadCrum title="Dashboard" name="& Static" content="" />
+          <div className="col-sm-6 p-md-0">
+        <div className="welcome-text">
+          <h4 className="container">Dashboard</h4>
+        </div>
+      </div>
             <div className="new-patients main_container">
 
               <BoxList/>

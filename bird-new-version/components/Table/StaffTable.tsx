@@ -39,91 +39,87 @@ import {
 const data: Payment[] = [
   {
     id: "A01",
-    // cagetype: "",
-    location: 1,
-    available: "true",
-    quantity:8
-
+    username: "ken",
+    role:"Nhân viên",
+    email: "ken99@yahoo.com",
   },
   {
     id: "A02",
-    location: 2,
-    available: "true",
-    quantity: 10
+    username: "alice",
+    role: "Quản lý",
+    email: "alice123@gmail.com",
     },
     
     {
     id: "A03",
-    location: 3,
-    available: "true",
-    quantity: 6
+    username: "bob",
+    role: "Nhân viên",
+    email: "bob89@hotmail.com",
     },
     
     {
     id: "A04",
-    location: 4,
-    available: "true",
-    quantity: 12
+    username: "jane",
+    role: "Nhân viên",
+    email: "jane456@gmail.com",
     },
     
     {
     id: "A05",
-    location: 5,
-    available: "true",
-    quantity: 5
+    username: "mark",
+    role: "Quản lý",
+    email: "mark77@yahoo.com",
     },
     
     {
     id: "A06",
-    location: 6,
-    available: "true",
-    quantity: 9
+    username: "sara",
+    role: "Nhân viên",
+    email: "sara55@gmail.com",
     },
     
     {
     id: "A07",
-    location: 7,
-    available: "true",
-    quantity: 7
+    username: "mike",
+    role: "Nhân viên",
+    email: "mike22@hotmail.com",
     },
     
     {
     id: "A08",
-    location: 8,
-    available: "true",
-    quantity: 11
+    username: "emily",
+    role: "Quản lý",
+    email: "emily34@yahoo.com",
     },
     
     {
     id: "A09",
-    location: 9,
-    available: "true",
-    quantity: 8
+    username: "john",
+    role: "Nhân viên",
+    email: "john66@gmail.com",
     },
     
     {
     id: "A10",
-    location: 10,
-    available: "true",
-    quantity: 4
+    username: "lisa",
+    role: "Quản lý",
+    email: "lisa99@gmail.com",
     },
     
     {
     id: "A11",
-    location: 11,
-    available: "true",
-    quantity: 15
+    username: "david",
+    role: "Nhân viên",
+    email: "david44@hotmail.com",
     }
 
 ]
 
 export type Payment = {
   id: string
-  // cagetype:string
-  location:number
-  available:string
-  quantity:number
-
+  username: string
+  role: string
+  email: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
@@ -154,43 +150,61 @@ export const columns: ColumnDef<Payment>[] = [
         <div>ID</div>
       )
     },
-    cell: ({ row }) => <a href="/cage/id"> <div>{row.getValue("id")}</div></a>,
+    cell: ({ row }) => <a href="/staff/id"><div className="">{row.getValue("id")}</div></a>, 
   },
 
   {
-    accessorKey: "available",
-    header: () => {
+    accessorKey: "username",
+    header: ({ column }) => {
       return (
-        <div>Available</div>
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          UserName
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
       )
     },
-    cell: ({ row }) =>  <div>{row.getValue("available")}</div>,
+    cell: ({ row }) => <div className="lowercase">{row.getValue("username")}</div>,
   },
-  
+
+  {
+    accessorKey: "role",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Role
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      )
+    },
+    cell: ({ row }) => <div className="lowercase">{row.getValue("role")}</div>,
+  },
 
 
   {
-    accessorKey: "location",
-    header: () => <div className="text-right">Location</div>,
-    cell: ({ row }) => {
-      const location = parseFloat(row.getValue("location"))
-
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat().format(location)
-      return <div className="text-right font-medium">{formatted}</div>
+    accessorKey: "email",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Email
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      )
     },
+    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
   },
-  {
-    accessorKey: "quantity",
-    header: () => <div className="text-right">Quantity</div>,
-    cell: ({ row }) => {
-      const quantity = parseFloat(row.getValue("quantity"))
 
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat().format(quantity)
-      return <div className="text-right font-medium">{formatted}</div>
-    },
-  },
+
+
+ 
   {
     id: "actions",
     enableHiding: false,
@@ -218,12 +232,11 @@ export const columns: ColumnDef<Payment>[] = [
           </DropdownMenuContent>
         </DropdownMenu>
       )
-
     },
   },
 ]
 
-export function Teaching() {
+export function StaffTable() {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -256,10 +269,10 @@ export function Teaching() {
     <div className="table">
       <div className="flex items-center py-4">
         <Input
-          placeholder="Tìm lồng theo id..."
-          value={(table.getColumn("id")?.getFilterValue() as string) ?? ""}
+          placeholder="Filter emails..."
+          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("id")?.setFilterValue(event.target.value)
+            table.getColumn("email")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
@@ -368,4 +381,4 @@ export function Teaching() {
   )
 }
 
-export default Teaching;
+export default StaffTable;

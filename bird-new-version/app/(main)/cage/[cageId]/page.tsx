@@ -2,36 +2,18 @@ import BabyBirdCard from '@/components/CageId/BabyBirdCard'
 import BirdCard from '@/components/CageId/BirdCard'
 import NotificationCard from '@/components/CageId/NotificationCard'
 import ProcessCard from '@/components/CageId/ProcessCard'
-import Table from "@/components/Bird/Table";
+import Table from "@/components/Table/BirdTable";
 import React from 'react'
 import SpStaff from '@/components/CageId/SpStaff'
 import EggManage from '@/components/CageId/EggManage'
+import BreadScrum from '@/components/BreadScrum';
 
 const page = () => {
     return (
         <div className="content-body">
             <div className="warper container-fluid">
                 <div className="main_container">
-                    <div className="row page-titles mx-0">
-                        <div className="col-sm-6 p-md-0">
-                            <div className="welcome-text">
-                                <h4 className="text-primary">Thông tin lồng </h4>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-                            <ol className="breadcrumb">
-                                <li className="breadcrumb-item">
-                                    <a href="/">Home</a>
-                                </li>
-                                <li className="breadcrumb-item active">
-                                    <a href="/cage">Tất Cả Lồng</a>
-                                </li>
-                                <li className="breadcrumb-item active">
-                                    <a>Thông tin lồng</a>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
+                <BreadScrum title='Thông tin lồng' subRouteTitle='cage' subTitle1='Tất Cả Lồng' subTitle2='Thông Tin Lồng'/>
 
                     <BirdCard />
                     <BirdCard />

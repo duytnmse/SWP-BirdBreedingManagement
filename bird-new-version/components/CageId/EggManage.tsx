@@ -1,9 +1,10 @@
 import React from 'react'
-import { TableEgg } from '../Egg/TableEgg'
+import EggTable from '../Table/EggTable'
+
 
 const EggManage = () => {
   return (
-    <div><TableEgg/></div>
+    <div><EggTable/></div>
   )
 }
 

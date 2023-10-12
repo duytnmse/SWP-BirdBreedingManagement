@@ -1,5 +1,6 @@
 
-import PageTitle from '@/components/StaffId/PageTitle'
+import BreadScrum from '@/components/BreadScrum'
+
 import Profile from '@/components/StaffId/Profile'
 import React from 'react'
 
@@ -9,7 +10,7 @@ const page = () => {
       <div className="content-body">
         <div className="warper container-fluid">
           <div className="all-patients main_container">
-            <PageTitle/>
+          <BreadScrum title='Thông Tin Nhân Viên' subRouteTitle='staff' subTitle1='Tất Cả Nhân Viên' subTitle2='Thông Tin Nhân Viên'/>
             <Profile/>
           </div>
         </div>

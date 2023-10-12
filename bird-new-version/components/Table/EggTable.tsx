@@ -35,91 +35,40 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import AddEgg from "../Form/AddEggForm"
 
 const data: Payment[] = [
   {
-    id: "A01",
-    username: "ken",
-    role:"Nhân viên",
-    email: "ken99@yahoo.com",
+    id: "m5gr84i9",
+    status: "Đã nở",
+    egg_birth: "12/10/2003",
   },
   {
-    id: "A02",
-    username: "alice",
-    role: "Quản lý",
-    email: "alice123@gmail.com",
-    },
-    
-    {
-    id: "A03",
-    username: "bob",
-    role: "Nhân viên",
-    email: "bob89@hotmail.com",
-    },
-    
-    {
-    id: "A04",
-    username: "jane",
-    role: "Nhân viên",
-    email: "jane456@gmail.com",
-    },
-    
-    {
-    id: "A05",
-    username: "mark",
-    role: "Quản lý",
-    email: "mark77@yahoo.com",
-    },
-    
-    {
-    id: "A06",
-    username: "sara",
-    role: "Nhân viên",
-    email: "sara55@gmail.com",
-    },
-    
-    {
-    id: "A07",
-    username: "mike",
-    role: "Nhân viên",
-    email: "mike22@hotmail.com",
-    },
-    
-    {
-    id: "A08",
-    username: "emily",
-    role: "Quản lý",
-    email: "emily34@yahoo.com",
-    },
-    
-    {
-    id: "A09",
-    username: "john",
-    role: "Nhân viên",
-    email: "john66@gmail.com",
-    },
-    
-    {
-    id: "A10",
-    username: "lisa",
-    role: "Quản lý",
-    email: "lisa99@gmail.com",
-    },
-    
-    {
-    id: "A11",
-    username: "david",
-    role: "Nhân viên",
-    email: "david44@hotmail.com",
-    }
-
+    id: "3u1reuv4",
+    status: "Chưa nở",
+    egg_birth: "11/10/2003",
+  },
+  {
+    id: "derv1ws0",
+    status: "Hỏng",
+    egg_birth: "11/10/2003",
+  },
+  {
+    id: "5kma53ae",
+    status: "Chưa nở",
+    egg_birth: "13/10/2003",
+  },
+  {
+    id: "bhqecj4p",
+    status: "Hỏng",
+    egg_birth: "9/11/2003",
+  },
 ]
 
 export type Payment = {
   id: string
-  username: string
-  role: string
-  email: string
+  status: "Chưa nở" | "Đã nở" | "Hỏng" 
+  egg_birth: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
@@ -142,69 +91,35 @@ export const columns: ColumnDef<Payment>[] = [
     enableSorting: false,
     enableHiding: false,
   },
-
   {
     accessorKey: "id",
-    header: () => {
-      return (
-        <div>ID</div>
-      )
-    },
-    cell: ({ row }) => <a href="/staff/id"><div className="">{row.getValue("id")}</div></a>, 
+    header: "ID",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("id")}</div>
+    ),
   },
-
   {
-    accessorKey: "username",
+    accessorKey: "egg_birth",
     header: ({ column }) => {
       return (
-        <Button
+        <Button className="pl-1000"
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          UserName
+       >
+          Ngày thêm trứng
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("username")}</div>,
+    cell: ({ row }) => <div className="lowercase">{row.getValue("egg_birth")}</div>,
   },
-
   {
-    accessorKey: "role",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Role
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("role")}</div>,
+    accessorKey: "status",
+    header: () => <div >Status</div>,
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("status")}</div>
+    ),
   },
-
-
-  {
-    accessorKey: "email",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Email
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
-  },
-
-
-
- 
   {
     id: "actions",
     enableHiding: false,
@@ -236,7 +151,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function Teaching() {
+export function EggTable() {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -265,19 +180,21 @@ export function Teaching() {
   })
 
   return (
-    // w-[45%] ml-10
-    <div className="table">
+    <div className="w-full">
+      
       <div className="flex items-center py-4">
         <Input
-          placeholder="Filter emails..."
-          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+          placeholder="Sắp xếp theo ID"
+          value={(table.getColumn("id")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
+            table.getColumn("id")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
         <DropdownMenu>
+        <AddEgg />
           <DropdownMenuTrigger asChild>
+            
             <Button variant="outline" className="ml-auto">
               Columns <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
@@ -314,9 +231,9 @@ export function Teaching() {
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
                     </TableHead>
                   )
                 })}
@@ -380,5 +297,4 @@ export function Teaching() {
     </div>
   )
 }
-
-export default Teaching;
+export default EggTable

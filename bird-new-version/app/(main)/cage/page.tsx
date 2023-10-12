@@ -1,6 +1,8 @@
 
-import PageTilte from '@/components/Cage/PageTitle'
-import Table from '@/components/Cage/Table'
+import BreadScrum from '@/components/BreadScrum'
+import CageTable from '@/components/Table/CageTable';
+
+
 import React from 'react'
 
 const AddStaffPage = () => {
@@ -10,14 +12,14 @@ const AddStaffPage = () => {
             <div className="content-body">
               <div className="warper container-fluid">
                 <div className="all-patients main_container">
-                  <PageTilte />
+                <BreadScrum title='Tất Cả Lồng' subRouteTitle='cage' subTitle1='Tất Cả Lồng'/>
                   <div className="row">
                     <div className="col-lg-12">
                       <div className="card">
                         <div className="card-header fix-card">
                           <div className="row">
                             <div className="col-8">
-                              <h4 className="card-title">Tất Cả Lồng </h4>
+                              <h4 className="card-title">Danh Sách Lồng</h4>
                             </div>
                             <div className="col-4 float-end">
                               <a
@@ -29,7 +31,7 @@ const AddStaffPage = () => {
                             </div>
                           </div>
                         </div>
-                        <div className='container'> <Table /></div>
+                        <div className='container'> <CageTable /></div>
                       </div>
                     </div>
                   </div>

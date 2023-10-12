@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CageProfile = () => {
+const AddCageForm = () => {
     return (
         <div className="card">
             <div className="card-header">
@@ -79,4 +79,4 @@ const CageProfile = () => {
     )
 }
 
-export default CageProfile
+export default AddCageForm

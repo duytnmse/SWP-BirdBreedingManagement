@@ -1,5 +1,7 @@
-import CageProfile from '@/components/AddCage/CageProfile'
-import PageTitle from '@/components/AddCage/PageTitle'
+
+
+import BreadScrum from '@/components/BreadScrum'
+import AddCageForm from '@/components/Form/AddCageForm'
 import React from 'react'
 
 const page = () => {
@@ -9,11 +11,11 @@ const page = () => {
                 <div className="content-body">
                     <div className="warper container-fluid">
                         <div className="new-patients main_container">
-                            <PageTitle />
+                        <BreadScrum title='Thêm Lồng Mới' subRouteTitle='add-cage' subTitle1='Thêm Lồng Mới'/>
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="card">
-                                 <CageProfile/>       
+                                 <AddCageForm/>       
                                     </div>
                                 </div>
                             </div>

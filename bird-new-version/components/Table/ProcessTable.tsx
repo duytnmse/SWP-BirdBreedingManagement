@@ -35,40 +35,109 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import AddEgg from "../AddEgg/AddEgg"
 
 const data: Payment[] = [
   {
-    id: "m5gr84i9",
-    status: "Đã nở",
-    egg_birth: "12/10/2003",
+    id: "A01",
+    total_egg: 10,
+    stage: "Chim Non",
+    fail_egg: 2,
+    cage_id: "A01",
+
   },
   {
-    id: "3u1reuv4",
-    status: "Chưa nở",
-    egg_birth: "11/10/2003",
-  },
-  {
-    id: "derv1ws0",
-    status: "Hỏng",
-    egg_birth: "11/10/2003",
-  },
-  {
-    id: "5kma53ae",
-    status: "Chưa nở",
-    egg_birth: "13/10/2003",
-  },
-  {
-    id: "bhqecj4p",
-    status: "Hỏng",
-    egg_birth: "9/11/2003",
-  },
+    id: "A02",
+    total_egg: 8,
+    stage: "Chim Non",
+    fail_egg: 1,
+    cage_id: "A02"
+    },
+    
+    {
+    id: "A03",
+    total_egg: 12,
+    stage: "Chim Chuyền Cành",
+    fail_egg: 3,
+    cage_id: "A03"
+    },
+    
+    {
+    id: "A04",
+    total_egg: 9,
+    stage: "Chim Trưởng Thành",
+    fail_egg: 0,
+    cage_id: "A04"
+    },
+    
+    {
+    id: "A05",
+    total_egg: 7,
+    stage: "Chim Non",
+    fail_egg: 2,
+    cage_id: "A05"
+    },
+    
+    {
+    id: "A06",
+    total_egg: 11,
+    stage: "Chim Chuyền Cành",
+    fail_egg: 1,
+    cage_id: "A06"
+    },
+    
+    {
+    id: "A07",
+    total_egg: 14,
+    stage: "Chim Non",
+    fail_egg: 4,
+    cage_id: "A07"
+    },
+    
+    {
+    id: "A08",
+    total_egg: 10,
+    stage: "Chim Trưởng Thành",
+    fail_egg: 2,
+    cage_id: "A08"
+    },
+    
+    {
+    id: "A09",
+    total_egg: 6,
+    stage: "Chim Chuyền Cành",
+    fail_egg: 0,
+    cage_id: "A09"
+    },
+    
+    {
+    id: "A10",
+    total_egg: 13,
+    stage: "Chim Trưởng Thành",
+    fail_egg: 3,
+    cage_id: "A10"
+    },
+    
+    {
+    id: "A11",
+    total_egg: 10,
+    stage: "Chim Non",
+    fail_egg: 1,
+    cage_id: "A11"
+    }
+    
+    
+ 
+
 ]
 
 export type Payment = {
   id: string
-  status: "Chưa nở" | "Đã nở" | "Hỏng" 
-  egg_birth: string
+  total_egg: number
+  stage: string
+  fail_egg: number
+  cage_id: string
+
+
 }
 
 export const columns: ColumnDef<Payment>[] = [
@@ -91,34 +160,64 @@ export const columns: ColumnDef<Payment>[] = [
     enableSorting: false,
     enableHiding: false,
   },
+
   {
     accessorKey: "id",
-    header: "ID",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("id")}</div>
-    ),
+    header: () => {
+      return (
+        <div>ID</div>
+      )
+    },
+    cell: ({ row }) => <a href="/bird/id"> <div>{row.getValue("id")}</div></a>,
   },
+  
   {
-    accessorKey: "egg_birth",
+    accessorKey: "stage",
     header: ({ column }) => {
       return (
-        <Button className="pl-1000"
+        <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-       >
-          Ngày thêm trứng
+        >
+          Stage
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("egg_birth")}</div>,
+    cell: ({ row }) => <div className="lowercase">{row.getValue("stage")}</div>,
+  },
+
+
+  {
+    accessorKey: "cage_id",
+    header: () => {
+      return (
+        <div>Cage Id</div>
+      )
+    },
+    cell: ({ row }) => <a href="/bird/id"> <div>{row.getValue("cage_id")}</div></a>,
   },
   {
-    accessorKey: "status",
-    header: () => <div >Status</div>,
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
-    ),
+    accessorKey: "total_egg",
+    header: () => <div className="text-right">Total Egg</div>,
+    cell: ({ row }) => {
+      const total_egg = parseFloat(row.getValue("total_egg"))
+
+      // Format the amount as a dollar amount
+      const formatted = new Intl.NumberFormat().format(total_egg)
+      return <div className="text-right font-medium">{formatted}</div>
+    },
+  },
+  {
+    accessorKey: "fail_egg",
+    header: () => <div className="text-right">Fail Egg</div>,
+    cell: ({ row }) => {
+      const fail_egg = parseFloat(row.getValue("fail_egg"))
+
+      // Format the amount as a dollar amount
+      const formatted = new Intl.NumberFormat().format(fail_egg)
+      return <div className="text-right font-medium">{formatted}</div>
+    },
   },
   {
     id: "actions",
@@ -142,16 +241,17 @@ export const columns: ColumnDef<Payment>[] = [
               Copy payment ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+            <a href="/bird/id"><DropdownMenuItem>View details</DropdownMenuItem></a>
+            <DropdownMenuItem>View </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       )
+
     },
   },
 ]
 
-export function TableEgg() {
+export function ProcessTable() {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -180,11 +280,11 @@ export function TableEgg() {
   })
 
   return (
-    <div className="w-full">
-      
+    // w-[45%] ml-10
+    <div className="table">
       <div className="flex items-center py-4">
         <Input
-          placeholder="Sắp xếp theo ID"
+          placeholder="Tìm chim theo id..."
           value={(table.getColumn("id")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("id")?.setFilterValue(event.target.value)
@@ -192,9 +292,7 @@ export function TableEgg() {
           className="max-w-sm"
         />
         <DropdownMenu>
-        <AddEgg />
           <DropdownMenuTrigger asChild>
-            
             <Button variant="outline" className="ml-auto">
               Columns <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
@@ -231,9 +329,9 @@ export function TableEgg() {
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
                     </TableHead>
                   )
                 })}
@@ -297,3 +395,5 @@ export function TableEgg() {
     </div>
   )
 }
+
+export default ProcessTable;

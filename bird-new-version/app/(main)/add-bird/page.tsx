@@ -1,5 +1,6 @@
-import BirdProfile from '@/components/AddBird/BirdProfile'
-import PageTilte from '@/components/AddBird/PageTitle'
+
+import BreadScrum from '@/components/BreadScrum'
+import AddBirdForm from '@/components/Form/AddBirdForm'
 import React from 'react'
 
 const page = () => {
@@ -9,11 +10,11 @@ const page = () => {
                 <div className="content-body">
                     <div className="warper container-fluid">
                         <div className="new-patients main_container">
-                            <PageTilte/>
+                            <BreadScrum title='Thêm Thông Tin Chim' subRouteTitle='add-bird' subTitle1='Thêm Thông Tin Chim'/>
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="card">                                     
-                                        <BirdProfile/>
+                                        <AddBirdForm/>
                                     </div>
                                 </div>
                             </div>
@@ -21,11 +22,8 @@ const page = () => {
                         </div>
                     </div>
                 </div>
-                {/* End section content */}
-
             </div>         
         </>
-
     )
 }
 

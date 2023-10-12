@@ -1,5 +1,6 @@
-import PageTitle from '@/components/AddStaff/PageTitle'
-import StaffProfile from '@/components/AddStaff/StaffProfile'
+
+import BreadScrum from '@/components/BreadScrum'
+import AddStaffForm from '@/components/Form/AddStaffForm'
 import React from 'react'
 
 const AddStaffPage = () => {
@@ -8,9 +9,9 @@ const AddStaffPage = () => {
             <div className="content-body">
                 <div className="warper container-fluid">
                     <div className="new-patients main_container">
-                        <PageTitle />
+                    <BreadScrum title='Thêm Nhân Viên Mới' subRouteTitle='add-staff' subTitle1='Thêm Nhân Viên Mới'/>
 
-                        <StaffProfile />
+                        <AddStaffForm />
                     </div>
                 </div>
             </div>

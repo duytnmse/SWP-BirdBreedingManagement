@@ -1,3 +1,4 @@
+import BreadScrum from '@/components/BreadScrum'
 import CageDiagramList from '@/components/CageDiagramSingle/CageDiagramList'
 import React from 'react'
 
@@ -9,23 +10,9 @@ const page = () => {
                 <div className="content-body">
                     <div className="warper container-fluid">
                         <div className="all-patients main_container">
-                            <div className="row page-titles mx-0">
-                                <div className="col-sm-6 p-md-0">
-                                    <div className="welcome-text">
-                                        <h4 className="text-primary">SƠ ĐỒ LỒNG</h4>
-                                    </div>
-                                </div>
-                                <div className="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-                                    <ol className="breadcrumb">
-                                        <li className="breadcrumb-item">
-                                            <a href="/">DashBoard</a>
-                                        </li>
-                                        <li className="breadcrumb-item active">
-                                            <a href="/cage-diagram-single">Sơ đồ lồng</a>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
+                            
+
+                            <BreadScrum title='Sơ Đồ Lồng' subRouteTitle='cage-diagram' subTitle1='Sơ Đồ Lồng'/>
                             <CageDiagramList />
                         </div>
                     </div>

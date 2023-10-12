@@ -247,7 +247,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function Teaching() {
+export function BirdTable() {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -392,4 +392,4 @@ export function Teaching() {
   )
 }
 
-export default Teaching;
+export default BirdTable;
