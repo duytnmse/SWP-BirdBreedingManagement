@@ -5,6 +5,7 @@ import ProcessCard from '@/components/CageId/ProcessCard'
 import TabStaff from '@/components/CageId/TabStaff'
 import Table from "@/components/Bird/Table";
 import React from 'react'
+import EggManage from '@/components/CageId/EggManage'
 
 const page = () => {
     return (
@@ -78,7 +79,7 @@ const page = () => {
                                             aria-controls="contact"
                                             aria-selected="false"
                                         >
-                                            Nhân viên phụ trách
+                                            Quản lý trứng
                                         </button>
                                     </li>
                                 </ul>
@@ -91,32 +92,47 @@ const page = () => {
                                     >
                                         <div className="card m-t-30">
                                             <div className="card-body">
-                                                <p>
-
-                                                    <div className="flex justify-between items-center mb-2.5">
-                                                        <label className='basis-[30%]'>SỐ TRỨNG ĐÃ ĐẺ :</label>
-                                                        <div className="grow pl-2.5">6</div>
+                                                <p className=" flex justify-between">
+                                                     <div>
+                                                     <div className="flex justify-between items-center mb-2.5">
+                                                        <label className='basis-[100%]'>NGÀY GHÉP CẶP :</label>
+                                                        <div className="grow pl-2.5 pb-1.5">11/10/2023</div>
                                                     </div>
 
                                                     <div className="flex justify-between items-center mb-2.5">
-                                                        <label className='basis-[30%]'>SỐ CHÍCH CHÒE :</label>
-                                                        <div className="grow pl-2.5">5</div>
+                                                        <label className='basis-[100%]'>NGÀY ĐẺ TRỨNG :</label>
+                                                        <div className="grow pl-2.5 pb-1.5">30/10/2023</div>
                                                     </div>
 
                                                     <div className="flex justify-between items-center mb-2.5">
-                                                        <label className='basis-[30%]'>GIAI ĐOẠN HIỆN TẠI:</label>
-                                                        <div className="grow pl-2.5">CHIM NON</div>
+                                                        <label className='basis-[100%]'>TỔNG SỐ TRỨNG:</label>
+                                                        <div className="grow pl-2.5 pb-1.5">10</div>
+                                                    </div>
+                                                        </div>               
+                                                    
+
+                                                        <div>
+                                                    <div className="flex justify-between items-center mb-2.5">
+                                                        <label className='basis-[100%]'>SỐ TRỨNG THẤT BẠI :</label>
+                                                        <div className="grow pl-2.5 pb-1.5">2</div>
                                                     </div>
 
                                                     <div className="flex justify-between items-center mb-2.5">
-                                                        <label className='basis-[30%]'>DỰ KIẾN GIAI ĐOẠN KẾ :</label>
-                                                        <div className="grow pl-2.5">8/10/2023</div>
+                                                        <label className='basis-[100%]'>MÃ LỒNG :</label>
+                                                        <div className="grow pl-2.5 pb-1.5">A001</div>
                                                     </div>
+
+                                                    <div className="flex justify-between items-center mb-2.5">
+                                                        <label className='basis-[100%]'>GIAI ĐOẠN :</label>
+                                                        <div className="grow pl-2.5 pb-2 basis-[100%]">ẤP TRỨNG</div>
+                                                    </div>
+                                                        </div>
+                                                    
                                                     
                                                       <br />
                                                     
                                                      
-                                                </p>
+                                                </p>    
                                             </div>
                                         </div>
                                     </div>
@@ -143,7 +159,7 @@ const page = () => {
                                         role="tabpanel"
                                         aria-labelledby="contact-tab"
                                     >
-                                        <TabStaff />
+                                        <EggManage />
                                     </div>
                                 </div>
                             </div>
