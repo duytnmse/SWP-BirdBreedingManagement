@@ -39,41 +39,35 @@ import {
 const data: Payment[] = [
   {
     id: "m5gr84i9",
-    amount: 316,
-    EggID: "success",
-    email: "ken99@yahoo.com",
+    status: "Đã nở",
+    egg_birth: "12/10/2003",
   },
   {
     id: "3u1reuv4",
-    amount: 242,
-    EggID: "success",
-    email: "Abe45@gmail.com",
+    status: "Chưa nở",
+    egg_birth: "11/10/2003",
   },
   {
     id: "derv1ws0",
-    amount: 837,
-    EggID: "processing",
-    email: "Monserrat44@gmail.com",
+    status: "Hỏng",
+    egg_birth: "11/10/2003",
   },
   {
     id: "5kma53ae",
-    amount: 874,
-    EggID: "success",
-    email: "Silas22@gmail.com",
+    status: "Chưa nở",
+    egg_birth: "13/10/2003",
   },
   {
     id: "bhqecj4p",
-    amount: 721,
-    EggID: "failed",
-    email: "carmella@hotmail.com",
+    status: "Hỏng",
+    egg_birth: "9/11/2003",
   },
 ]
 
 export type Payment = {
   id: string
-  amount: number
-  EggID: "pending" | "processing" | "success" | "failed"
-  email: string
+  status: "Chưa nở" | "Đã nở" | "Hỏng" 
+  egg_birth: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
@@ -97,41 +91,33 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "EggID",
-    header: "Egg ID",
+    accessorKey: "id",
+    header: "ID",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("EggID")}</div>
+      <div className="capitalize">{row.getValue("id")}</div>
     ),
   },
   {
-    accessorKey: "email",
+    accessorKey: "egg_birth",
     header: ({ column }) => {
       return (
-        <Button
+        <Button className="pl-1000"
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Email
+       >
+          Ngày thêm trứng
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
+    cell: ({ row }) => <div className="lowercase">{row.getValue("egg_birth")}</div>,
   },
   {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"))
-
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount)
-
-      return <div className="text-right font-medium">{formatted}</div>
-    },
+    accessorKey: "status",
+    header: () => <div >Status</div>,
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("status")}</div>
+    ),
   },
   {
     id: "actions",
@@ -196,10 +182,10 @@ export function TableEgg() {
     <div className="w-full">
       <div className="flex items-center py-4">
         <Input
-          placeholder="Filter emails..."
-          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+          placeholder="Filter egg_birth..."
+          value={(table.getColumn("egg_birth")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
+            table.getColumn("egg_birth")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
