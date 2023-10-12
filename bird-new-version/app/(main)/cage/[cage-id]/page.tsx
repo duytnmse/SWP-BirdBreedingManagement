@@ -5,6 +5,7 @@ import ProcessCard from '@/components/CageId/ProcessCard'
 import TabStaff from '@/components/CageId/TabStaff'
 import Table from "@/components/Bird/Table";
 import React from 'react'
+import SpStaff from '@/components/CageId/SpStaff'
 
 const page = () => {
     return (
@@ -149,6 +150,9 @@ const page = () => {
                             </div>
                         </div>
                     </div>
+
+
+                    
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="card shadow">
@@ -169,11 +173,14 @@ const page = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-4 col-lg-4">
+                        <div className="col-md-6 col-lg-4">
                             <NotificationCard />
                         </div>
-                        <div className="col-md-4 col-lg-4">
+                        <div className="col-md-6 col-lg-4">
                             <ProcessCard />
+                        </div>
+                        <div className="col-md-6 col-lg-4">
+                            <SpStaff />
                         </div>
                      
                         
