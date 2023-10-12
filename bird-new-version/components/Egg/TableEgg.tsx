@@ -35,6 +35,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import AddEgg from "../AddEgg/AddEgg"
 
 const data: Payment[] = [
   {
@@ -180,17 +181,20 @@ export function TableEgg() {
 
   return (
     <div className="w-full">
+      
       <div className="flex items-center py-4">
         <Input
-          placeholder="Filter egg_birth..."
-          value={(table.getColumn("egg_birth")?.getFilterValue() as string) ?? ""}
+          placeholder="Sắp xếp theo ID"
+          value={(table.getColumn("id")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("egg_birth")?.setFilterValue(event.target.value)
+            table.getColumn("id")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
         <DropdownMenu>
+        <AddEgg />
           <DropdownMenuTrigger asChild>
+            
             <Button variant="outline" className="ml-auto">
               Columns <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
