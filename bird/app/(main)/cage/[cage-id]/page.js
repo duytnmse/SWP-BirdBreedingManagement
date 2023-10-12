@@ -77,7 +77,7 @@ const page = () => {
                                             aria-controls="contact"
                                             aria-selected="false"
                                         >
-                                            Nhân viên phụ trách
+                                            Quản lý trứng
                                         </button>
                                     </li>
                                 </ul>
