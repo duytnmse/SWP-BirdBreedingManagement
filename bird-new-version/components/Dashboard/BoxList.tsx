@@ -8,10 +8,10 @@ const BoxList = () => {
                     <div className="card-body">
                         <div className="media text-center">
                             <span>
-                                <i className="fas fa-calendar-check fa-2x" />
+                                <i className="fas fa-crow fa-2x" />
                             </span>
                             <div className="media-body">
-                                <span className="text-white">Birds</span>
+                                <span className="text-white">Chim</span>
                                 <h3 className="mb-0 text-white">1000</h3>
                             </div>
                         </div>
@@ -19,14 +19,14 @@ const BoxList = () => {
                 </div>
             </div>
             <div className="col-sm-6 col-xl-3 col-lg-6">
-                <div className="widget card card-danger bg-card2 " style={{ backgroundColor: 'rgb(115,102,255)' }}>
+                <div className="widget card card-danger bg-card2 " style={{ backgroundColor: 'rgb(220,53,69)' }}>
                     <div className="card-body">
                         <div className="media text-center">
                             <span>
-                                <i className="fas fa-user-nurse fa-2x" />
+                                <i className="fas fa-egg fa-2x" />
                             </span>
                             <div className="media-body">
-                                <span className="text-white">Cage</span>
+                                <span className="text-white">Trứng</span>
                                 <h3 className="mb-0 text-white">300</h3>
                             </div>
                         </div>
@@ -35,15 +35,15 @@ const BoxList = () => {
                 </div>
             </div>
             <div className="col-sm-6 col-xl-3 col-lg-6">
-                <div className="widget card card-primary bg-card3" style={{ backgroundColor: 'CadetBlue' }}>
+                <div className="widget card card-primary bg-card3" style={{ backgroundColor: 'rgb(220,53,69)' }}>
                     <div className="card-body">
                         <div className="media text-center">
                             <span>
-                                <i className="fas fa-user-plus fa-2x" />
+                                <i className="fas fa-users fa-2x" />
                             </span>
                             <div className="media-body">
-                                <span className="text-white">Mutation birds</span>
-                                <h3 className="mb-0 text-white">30</h3>
+                                <span className="text-white">Nhân viên</span>
+                                <h3 className="mb-0 text-white">5</h3>
                             </div>
                         </div>
                     </div>
@@ -51,15 +51,15 @@ const BoxList = () => {
                 </div>
             </div>
             <div className="col-sm-6 col-xl-3 col-lg-6">
-                <div className="widget card card-primary bg-card4" style={{ backgroundColor: 'purple' }}>
+                <div className="widget card card-primary bg-card4" style={{ backgroundColor: 'rgb(220,53,69)' }}>
                     <div className="card-body">
                         <div className="media text-center">
                             <span>
-                                <i className="fas fa-database fa-2x" />
+                                <i className="fas fa-retweet fa-2x" />
                             </span>
                             <div className="media-body">
-                                <span className="text-white">Percentage of success eggs</span>
-                                <h3 className="mb-0 text-white">92%</h3>
+                                <span className="text-white">Quá trình đang diễn ra</span>
+                                <h3 className="mb-0 text-white">3</h3>
                             </div>
                         </div>
                     </div>
