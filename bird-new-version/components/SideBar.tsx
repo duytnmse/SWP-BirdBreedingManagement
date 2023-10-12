@@ -81,7 +81,7 @@ const SideBar = () => {
           <li className="has-submenu">
             <a href="/cage-diagram">
               <i className="fas fa-pills" />
-              <span className="nav-label">Sơ đồ lồng</span>
+              <span className="nav-label">Sơ đồ khu ghép giống</span>
             </a>
           </li>
           {/* <li className="has-submenu">
@@ -99,9 +99,9 @@ const SideBar = () => {
             </ul>
           </li> */}
           <li className="has-submenu">
-            <a href="/meal">
+            <a href="/cage-diagram-single">
               <i className="fas fa-calendar-alt" />
-              <span className="nav-label">Khẩu phần ăn</span>
+              <span className="nav-label">Sơ đồ khu nuôi chim</span>
             </a>
           </li>
           {/* <li className="has-submenu">

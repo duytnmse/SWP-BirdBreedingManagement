@@ -12,18 +12,21 @@ const Header = () => {
           </div>
           <div className="left-header content-header__menu">
             <ul className="list-unstyled">
-              {/* <li className="nav-link btn">
-                <a href="#">
+
+              <li className="nav-link btn">
+                <a href="/process">
                   <i className="far fa-calendar-check" />{" "}
-                  <span> Make an appointment</span>
+                  <span> Xem quá trình</span>
                 </a>
-              </li> */}
+              </li>
+
               <li className="nav-link btn">
                 <a href="/cr-process">
                   <i className="far fa-file-alt" />{" "}
                   <span> Tạo Quá Trình</span>
                 </a>
               </li>
+
             </ul>
           </div>
           <div className="left-header content-header__menu">
@@ -37,7 +40,7 @@ const Header = () => {
               <a
                 className="text-dark"
                 href="#!"
-                // onclick="javascript:toggleFullScreen()"
+              // onclick="javascript:toggleFullScreen()"
               >
                 <i className="fas fa-expand" />
               </a>
