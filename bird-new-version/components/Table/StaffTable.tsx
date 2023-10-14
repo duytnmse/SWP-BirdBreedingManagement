@@ -35,94 +35,106 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { staffs } from "@/data/data"
 
-const data: Payment[] = [
-  {
-    id: "A01",
-    username: "ken",
-    role:"Nhân viên",
-    email: "ken99@yahoo.com",
-  },
-  {
-    id: "A02",
-    username: "alice",
-    role: "Quản lý",
-    email: "alice123@gmail.com",
-    },
-    
-    {
-    id: "A03",
-    username: "bob",
-    role: "Nhân viên",
-    email: "bob89@hotmail.com",
-    },
-    
-    {
-    id: "A04",
-    username: "jane",
-    role: "Nhân viên",
-    email: "jane456@gmail.com",
-    },
-    
-    {
-    id: "A05",
-    username: "mark",
-    role: "Quản lý",
-    email: "mark77@yahoo.com",
-    },
-    
-    {
-    id: "A06",
-    username: "sara",
-    role: "Nhân viên",
-    email: "sara55@gmail.com",
-    },
-    
-    {
-    id: "A07",
-    username: "mike",
-    role: "Nhân viên",
-    email: "mike22@hotmail.com",
-    },
-    
-    {
-    id: "A08",
-    username: "emily",
-    role: "Quản lý",
-    email: "emily34@yahoo.com",
-    },
-    
-    {
-    id: "A09",
-    username: "john",
-    role: "Nhân viên",
-    email: "john66@gmail.com",
-    },
-    
-    {
-    id: "A10",
-    username: "lisa",
-    role: "Quản lý",
-    email: "lisa99@gmail.com",
-    },
-    
-    {
-    id: "A11",
-    username: "david",
-    role: "Nhân viên",
-    email: "david44@hotmail.com",
-    }
+// const data: Payment[] = [
+//   {
+//     id: "A01",
+//     username: "ken",
+//     role: "Nhân viên",
+//     email: "ken99@yahoo.com",
+//   },
+//   {
+//     id: "A02",
+//     username: "alice",
+//     role: "Quản lý",
+//     email: "alice123@gmail.com",
+//   },
 
-]
+//   {
+//     id: "A03",
+//     username: "bob",
+//     role: "Nhân viên",
+//     email: "bob89@hotmail.com",
+//   },
 
-export type Payment = {
-  id: string
-  username: string
-  role: string
-  email: string
+//   {
+//     id: "A04",
+//     username: "jane",
+//     role: "Nhân viên",
+//     email: "jane456@gmail.com",
+//   },
+
+//   {
+//     id: "A05",
+//     username: "mark",
+//     role: "Quản lý",
+//     email: "mark77@yahoo.com",
+//   },
+
+//   {
+//     id: "A06",
+//     username: "sara",
+//     role: "Nhân viên",
+//     email: "sara55@gmail.com",
+//   },
+
+//   {
+//     id: "A07",
+//     username: "mike",
+//     role: "Nhân viên",
+//     email: "mike22@hotmail.com",
+//   },
+
+//   {
+//     id: "A08",
+//     username: "emily",
+//     role: "Quản lý",
+//     email: "emily34@yahoo.com",
+//   },
+
+//   {
+//     id: "A09",
+//     username: "john",
+//     role: "Nhân viên",
+//     email: "john66@gmail.com",
+//   },
+
+//   {
+//     id: "A10",
+//     username: "lisa",
+//     role: "Quản lý",
+//     email: "lisa99@gmail.com",
+//   },
+
+//   {
+//     id: "A11",
+//     username: "david",
+//     role: "Nhân viên",
+//     email: "david44@hotmail.com",
+//   }
+
+// ]
+
+// export type Payment = {
+//   id: string
+//   username: string
+//   role: string
+//   email: string
+// }
+
+export type StaffType = {
+  id: number,
+  username: string,
+  email: string,
+  password: string,
+  fullname: string,
+  created_by?: number,
+  role_id: number,
 }
+const data: StaffType[] = staffs;
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<StaffType>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -150,7 +162,7 @@ export const columns: ColumnDef<Payment>[] = [
         <div>ID</div>
       )
     },
-    cell: ({ row }) => <a href="/staff/id"><div className="">{row.getValue("id")}</div></a>, 
+    cell: ({ row }) => <a href={`/staff/${row.original.id}`}><div className="">{row.getValue("id")}</div></a>,
   },
 
   {
@@ -170,7 +182,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
 
   {
-    accessorKey: "role",
+    accessorKey: "role_id",
     header: ({ column }) => {
       return (
         <Button
@@ -182,7 +194,7 @@ export const columns: ColumnDef<Payment>[] = [
         </Button>
       )
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("role")}</div>,
+    cell: ({ row }) => <div className="lowercase">{row.getValue("role_id")}</div>,
   },
 
 
@@ -204,7 +216,7 @@ export const columns: ColumnDef<Payment>[] = [
 
 
 
- 
+
   {
     id: "actions",
     enableHiding: false,

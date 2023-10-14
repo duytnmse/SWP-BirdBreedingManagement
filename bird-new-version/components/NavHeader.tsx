@@ -8,14 +8,14 @@ const NavHeader = () => {
           {" "}
           <img
             className="logo-tabib"
-            src="assets/images/download.png"
+            src="/assets/images/download.png"
             alt=""
           />
         </a>
         <a href="/">
           <img
             className="brand-title" style={{ width: "100px", height: "60px" }}
-            src="assets/images/logo.png"
+            src="/assets/images/logo.png"
             alt=""
           />
         </a>

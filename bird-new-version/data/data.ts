@@ -13,6 +13,17 @@ interface Bird {
     process: boolean
 }
 
+interface Staff {
+    id: string,
+    username?: string,
+    email?: string,
+    password?: string,
+    fullname?: string,
+    created_by?: string,
+    created_date?: string,
+    role_id?: string,
+}
+
 
 export const birds: Bird[] = [
     {
@@ -124,3 +135,36 @@ export const birds: Bird[] = [
 ]
 
 export const cages = [{}, {}]
+
+export const staffs: Staff[] = [
+    {
+        "id": '1',
+        "username": "minhduy",
+        "email": "tnmd@gmail.com",
+        "password": "123456789",
+        "fullname": "Tran Ngo Minh Duy",
+        "created_by": '3',
+        "created_date": "12/12/2000",
+        "role_id": '1',
+    },
+    {
+        "id": '2',
+        "username": "quoctinh",
+        "email": "mvqt@gmail.com",
+        "password": "987654321",
+        "fullname": "Mai Van Quoc Tinh",
+        "created_by": '3',
+        "created_date": "12/12/2000",
+        "role_id": '1',
+    },
+    {
+        "id": '3',
+        "username": "minhduy",
+        "email": "tnmd@gmail.com",
+        "password": "123456789",
+        "fullname": "Tran Ngo Minh Duy",
+        "created_by": undefined,
+        "created_date": "12/12/2000",
+        "role_id": '1',
+    },
+] 

@@ -1,6 +1,17 @@
 import React from 'react'
 
-const Profile = () => {
+
+export type StaffType = {
+  id?: string,
+  username?: string,
+  email?: string,
+  password?: string,
+  fullname?: string,
+  created_by?: string,
+  created_date?: string,
+  role_id?: string,
+}
+const Profile = ({ id, username, email, password, fullname, created_by, created_date, role_id }: StaffType) => {
   return (
 
     <div className="card">
@@ -14,30 +25,30 @@ const Profile = () => {
 
               <div className="col-xl-4">
                 <div className="form-group row widget-3">
-                  
-                    <div className="form-input">
-                      <label
-                        className="labeltest"
-                        htmlFor="file-ip-1"
-                      >
-                        <span>
-                          {" "}
-                          ... {" "}
-                        </span>
-                      </label>
-                      <input
-                        type="file"
-                        id="file-ip-1"
-                        accept="image/*"
-                        // onchange="showPreview(event);"
+
+                  <div className="form-input">
+                    <label
+                      className="labeltest"
+                      htmlFor="file-ip-1"
+                    >
+                      <span>
+                        {" "}
+                        ... {" "}
+                      </span>
+                    </label>
+                    <input
+                      type="file"
+                      id="file-ip-1"
+                      accept="image/*"
+                    // onchange="showPreview(event);"
+                    />
+                    <div className="preview">
+                      <img
+                        id="file-ip-1-preview"
+                        src="#"
+                        alt="img"
                       />
-                      <div className="preview">
-                        <img
-                          id="file-ip-1-preview"
-                          src="#"
-                          alt="img"
-                        />
-                      
+
                     </div>
                   </div>
                 </div>
@@ -47,45 +58,45 @@ const Profile = () => {
               <div className="col-xl-8 ">
                 <div className="flex justify-between mb-2.5;">
                   <label className='basis-[30%]'>ID:</label>
-                  <div className="grow pl-2.5">A01</div>
+                  <div className="grow pl-2.5">{id}</div>
                 </div>
 
                 <div className="flex justify-between mb-2.5;">
-                  <label  className='basis-[30%]' >User Name:</label>
-                  <div className="grow pl-2.5">Minh Lu</div>
+                  <label className='basis-[30%]' >User Name:</label>
+                  <div className="grow pl-2.5">{username}</div>
                 </div>
 
                 <div className="flex justify-between mb-2.5;">
-                  <label  className='basis-[30%]'>Email:</label>
-                  <div className="grow pl-2.5">Minhlu@gmail.com</div>
+                  <label className='basis-[30%]'>Email:</label>
+                  <div className="grow pl-2.5">{email}</div>
                 </div>
 
                 <div className="flex justify-between mb-2.5;">
-                  <label  className='basis-[30%]'>Password:</label>
-                  <div className="grow pl-2.5">MyPassword123</div>
+                  <label className='basis-[30%]'>Password:</label>
+                  <div className="grow pl-2.5">{password}</div>
                 </div>
 
                 <div className="flex justify-between mb-2.5;">
-                  <label  className='basis-[30%]'>Full Name:</label>
-                  <div className="grow pl-2.5">Hoàng Minh Lu</div>
+                  <label className='basis-[30%]'>Full Name:</label>
+                  <div className="grow pl-2.5">{fullname}</div>
                 </div>
 
                 <div className="flex justify-between mb-2.5;">
-                  <label  className='basis-[30%]'>Created By:</label>
-                  <div className="grow pl-2.5">Mai Thị Khôi</div>
+                  <label className='basis-[30%]'>Created By:</label>
+                  <div className="grow pl-2.5">{created_by}</div>
                 </div>
 
                 <div className="flex justify-between mb-2.5;">
-                  <label  className='basis-[30%]'>Created Date:</label>
-                  <div className="grow pl-2.5">12/09/2022</div>
+                  <label className='basis-[30%]'>Created Date:</label>
+                  <div className="grow pl-2.5">{created_date}</div>
                 </div>
 
                 <div className="flex justify-between mb-2.5;">
-                  <label  className='basis-[30%]'>Role:</label>
-                  <div className="grow pl-2.5">Nhân viên</div>
+                  <label className='basis-[30%]'>Role:</label>
+                  <div className="grow pl-2.5">{role_id}</div>
                 </div>
 
-                
+
 
 
               </div>
