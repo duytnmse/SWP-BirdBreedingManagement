@@ -124,13 +124,14 @@ import { staffs } from "@/data/data"
 // }
 
 export type StaffType = {
-  id: number,
-  username: string,
-  email: string,
-  password: string,
-  fullname: string,
-  created_by?: number,
-  role_id: number,
+  id: string,
+  username?: string,
+  email?: string,
+  password?: string,
+  fullname?: string,
+  created_by?: string,
+  created_date?: string,
+  role_id?: string,
 }
 const data: StaffType[] = staffs;
 

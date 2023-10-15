@@ -13,11 +13,11 @@ const CageDiagramList = () => {
                             <CageDiagramItem
                                 key={bird.id}
                                 id={bird.id}
-                                name={bird.name}
-                                specialty={bird.specialty}
-                                imageSrc={bird.imageSrc}
-                                starReview={bird.starReview}
-                                process={bird.process}
+                            // name={bird.name}
+                            // specialty={bird.specialty}
+                            // imageSrc={bird.imageSrc}
+                            // starReview={bird.starReview}
+                            // process={bird.process}
                             />
 
                         ))}

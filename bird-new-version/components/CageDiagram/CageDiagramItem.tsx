@@ -9,11 +9,11 @@ interface StarReview {
 }
 
 interface CageDiagramItemProps {
-    id: number,
-    name: string,
-    specialty: string,
-    imageSrc: string,
-    starReview: StarReview,
+    id: string,
+    name?: string,
+    specialty?: string,
+    imageSrc?: string,
+    starReview?: StarReview,
     process?: boolean
 }
 

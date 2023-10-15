@@ -53,7 +53,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Lửa",
 //     mutation: 3,
 //     },
-    
+
 //     {
 //     id: "A03",
 //     egg: 5,
@@ -61,7 +61,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Than",
 //     mutation: 2,
 //     },
-    
+
 //     {
 //     id: "A04",
 //     egg: 6,
@@ -69,7 +69,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Lửa",
 //     mutation: 4,
 //     },
-    
+
 //     {
 //     id: "A05",
 //     egg: 3,
@@ -77,7 +77,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Than",
 //     mutation: 1,
 //     },
-    
+
 //     {
 //     id: "A06",
 //     egg: 5,
@@ -85,7 +85,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Lửa",
 //     mutation: 2,
 //     },
-    
+
 //     {
 //     id: "A07",
 //     egg: 4,
@@ -93,7 +93,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Lửa",
 //     mutation: 3,
 //     },
-    
+
 //     {
 //     id: "A08",
 //     egg: 3,
@@ -101,7 +101,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Than",
 //     mutation: 1,
 //     },
-    
+
 //     {
 //     id: "A09",
 //     egg: 6,
@@ -109,7 +109,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Lửa",
 //     mutation: 5,
 //     },
-    
+
 //     {
 //     id: "A10",
 //     egg: 4,
@@ -117,7 +117,7 @@ import { birds } from "@/data/data"
 //     type: "Chích Chòe Than",
 //     mutation: 2,
 //     },
-    
+
 //     {
 //     id: "A11",
 //     egg: 5,
@@ -141,19 +141,19 @@ import { birds } from "@/data/data"
 
 export type BirdType = {
   id: string,
-  bird_type?:string,
-  isMale?:boolean,
-  hatch_date?:string,
-  father_id?:string,
-  mother_id?:string,
-  cage_id?:string,
-  isAlive?:boolean,
-  age_range?:string,
-  mutation_rate?:number,
-  mutation_note?:string,
-  weight?:number,
-  feather_color?:string,
-  image?:string
+  bird_type?: string,
+  isMale?: string,
+  hatch_date?: string,
+  father_id?: string,
+  mother_id?: string,
+  cage_id?: string,
+  isAlive?: string,
+  age_range?: string,
+  mutation_rate?: number,
+  mutation_note?: string,
+  weight?: number,
+  feather_color?: string,
+  image?: string
 }
 
 const data: BirdType[] = birds;
@@ -195,7 +195,7 @@ export const columns: ColumnDef<BirdType>[] = [
         <div>Type</div>
       )
     },
-    cell: ({ row }) =>  <div>{row.getValue("bird_type")}</div>,
+    cell: ({ row }) => <div>{row.getValue("bird_type")}</div>,
   },
   {
     accessorKey: "hatch_date",

@@ -6,7 +6,7 @@ import { staffs } from '@/data/data'
 import { useParams } from 'next/navigation'
 import React from 'react'
 
-const page = () => {
+const StaffIdPage = () => {
   const params = useParams();
 
   const IdFilter = staffs.find((staff) => staff.id === params.staffId);
@@ -34,4 +34,4 @@ const page = () => {
   )
 }
 
-export default page
+export default StaffIdPage
