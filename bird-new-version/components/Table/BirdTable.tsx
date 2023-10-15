@@ -35,109 +35,130 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { birds } from "@/data/data"
 
-const data: Payment[] = [
-  {
-    id: "A01",
-    egg: 6,
-    sex: "Trống",
-    type: "Chích Chòe Than",
-    mutation: 5,
+// const data: Payment[] = [
+//   {
+//     id: "A01",
+//     egg: 6,
+//     sex: "Trống",
+//     type: "Chích Chòe Than",
+//     mutation: 5,
 
-  },
-  {
-    id: "A02",
-    egg: 4,
-    sex: "Trống",
-    type: "Chích Chòe Lửa",
-    mutation: 3,
-    },
+//   },
+//   {
+//     id: "A02",
+//     egg: 4,
+//     sex: "Trống",
+//     type: "Chích Chòe Lửa",
+//     mutation: 3,
+//     },
     
-    {
-    id: "A03",
-    egg: 5,
-    sex: "Mái",
-    type: "Chích Chòe Than",
-    mutation: 2,
-    },
+//     {
+//     id: "A03",
+//     egg: 5,
+//     sex: "Mái",
+//     type: "Chích Chòe Than",
+//     mutation: 2,
+//     },
     
-    {
-    id: "A04",
-    egg: 6,
-    sex: "Trống",
-    type: "Chích Chòe Lửa",
-    mutation: 4,
-    },
+//     {
+//     id: "A04",
+//     egg: 6,
+//     sex: "Trống",
+//     type: "Chích Chòe Lửa",
+//     mutation: 4,
+//     },
     
-    {
-    id: "A05",
-    egg: 3,
-    sex: "Trống",
-    type: "Chích Chòe Than",
-    mutation: 1,
-    },
+//     {
+//     id: "A05",
+//     egg: 3,
+//     sex: "Trống",
+//     type: "Chích Chòe Than",
+//     mutation: 1,
+//     },
     
-    {
-    id: "A06",
-    egg: 5,
-    sex: "Mái",
-    type: "Chích Chòe Lửa",
-    mutation: 2,
-    },
+//     {
+//     id: "A06",
+//     egg: 5,
+//     sex: "Mái",
+//     type: "Chích Chòe Lửa",
+//     mutation: 2,
+//     },
     
-    {
-    id: "A07",
-    egg: 4,
-    sex: "Trống",
-    type: "Chích Chòe Lửa",
-    mutation: 3,
-    },
+//     {
+//     id: "A07",
+//     egg: 4,
+//     sex: "Trống",
+//     type: "Chích Chòe Lửa",
+//     mutation: 3,
+//     },
     
-    {
-    id: "A08",
-    egg: 3,
-    sex: "Mái",
-    type: "Chích Chòe Than",
-    mutation: 1,
-    },
+//     {
+//     id: "A08",
+//     egg: 3,
+//     sex: "Mái",
+//     type: "Chích Chòe Than",
+//     mutation: 1,
+//     },
     
-    {
-    id: "A09",
-    egg: 6,
-    sex: "Trống",
-    type: "Chích Chòe Lửa",
-    mutation: 5,
-    },
+//     {
+//     id: "A09",
+//     egg: 6,
+//     sex: "Trống",
+//     type: "Chích Chòe Lửa",
+//     mutation: 5,
+//     },
     
-    {
-    id: "A10",
-    egg: 4,
-    sex: "Mái",
-    type: "Chích Chòe Than",
-    mutation: 2,
-    },
+//     {
+//     id: "A10",
+//     egg: 4,
+//     sex: "Mái",
+//     type: "Chích Chòe Than",
+//     mutation: 2,
+//     },
     
-    {
-    id: "A11",
-    egg: 5,
-    sex: "Trống",
-    type: "Chích Chòe Lửa",
-    mutation: 4,
-    }
+//     {
+//     id: "A11",
+//     egg: 5,
+//     sex: "Trống",
+//     type: "Chích Chòe Lửa",
+//     mutation: 4,
+//     }
 
-]
+// ]
 
-export type Payment = {
-  id: string
-  egg: number
-  sex: string
-  type: string
-  mutation: number
+// export type Payment = {
+//   id: string
+//   egg: number
+//   sex: string
+//   type: string
+//   mutation: number
 
 
+// }
+
+
+export type BirdType = {
+  id: string,
+  bird_type?:string,
+  isMale?:boolean,
+  hatch_date?:string,
+  father_id?:string,
+  mother_id?:string,
+  cage_id?:string,
+  isAlive?:boolean,
+  age_range?:string,
+  mutation_rate?:number,
+  mutation_note?:string,
+  weight?:number,
+  feather_color?:string,
+  image?:string
 }
 
-export const columns: ColumnDef<Payment>[] = [
+const data: BirdType[] = birds;
+
+export const columns: ColumnDef<BirdType>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -165,53 +186,53 @@ export const columns: ColumnDef<Payment>[] = [
         <div>ID</div>
       )
     },
-    cell: ({ row }) => <a href="/bird/id"> <div>{row.getValue("id")}</div></a>,
+    cell: ({ row }) => <a href={`/bird/${row.original.id}`}> <div>{row.getValue("id")}</div></a>,
   },
   {
-    accessorKey: "type",
+    accessorKey: "bird_type",
     header: () => {
       return (
         <div>Type</div>
       )
     },
-    cell: ({ row }) =>  <div>{row.getValue("type")}</div>,
+    cell: ({ row }) =>  <div>{row.getValue("bird_type")}</div>,
   },
   {
-    accessorKey: "sex",
+    accessorKey: "hatch_date",
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          sex
+          Hatch Date
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("sex")}</div>,
+    cell: ({ row }) => <div className="lowercase">{row.getValue("hatch_date")}</div>,
   },
 
 
   {
-    accessorKey: "mutation",
-    header: () => <div className="text-right">Mutation</div>,
+    accessorKey: "mutation_rate",
+    header: () => <div className="text-right">Mutation(%)</div>,
     cell: ({ row }) => {
-      const mutation = parseFloat(row.getValue("mutation"))
+      const mutation_rate = parseFloat(row.getValue("mutation_rate"))
 
       // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat().format(mutation)
+      const formatted = new Intl.NumberFormat().format(mutation_rate)
       return <div className="text-right font-medium">{formatted}</div>
     },
   },
   {
-    accessorKey: "egg",
-    header: () => <div className="text-right">Egg</div>,
+    accessorKey: "weight",
+    header: () => <div className="text-right">Weight(g)</div>,
     cell: ({ row }) => {
-      const egg = parseFloat(row.getValue("egg"))
+      const weight = parseFloat(row.getValue("weight"))
 
       // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat().format(egg)
+      const formatted = new Intl.NumberFormat().format(weight)
       return <div className="text-right font-medium">{formatted}</div>
     },
   },

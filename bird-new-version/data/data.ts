@@ -5,12 +5,20 @@ interface StarReview {
 }
 
 interface Bird {
-    id: number,
-    name: string,
-    specialty: string,
-    imageSrc: string,
-    starReview: StarReview,
-    process: boolean
+    id: string,
+    bird_type?:string,
+    isMale?:string,
+    hatch_date?:string,
+    father_id?:string,
+    mother_id?:string,
+    cage_id?:string,
+    isAlive?:string,
+    age_range?:string,
+    mutation_rate?:number,
+    mutation_note?:string,
+    weight?:number,
+    feather_color?:string,
+    image?:string
 }
 
 interface Staff {
@@ -27,110 +35,55 @@ interface Staff {
 
 export const birds: Bird[] = [
     {
-        "id": 1,
-        "name": "Dr. Michael Sullivan",
-        "specialty": "Endocrinologist",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 6,
-            "eggIcons": 2
-        },
-        "process": true,
+        "id": 'A01',
+        "bird_type": "Chich Choe Lua", 
+        "isMale" : "Trong",
+        "hatch_date" : "12/02/2023",
+        "father_id" : "B01",
+        "mother_id" : "C01",
+        "cage_id" : "D01",
+        "isAlive" : "1",
+        "age_range" : "Chim Non",
+        "mutation_rate" : 1,   
+        "mutation_note" : "Duoi Dai",  
+        "weight" : 280,
+        "feather_color" : "Xanh",
+        "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2FbienhoathanhsonD0%2Fchim-chich-choe-lua%2F&psig=AOvVaw0KtIVpEOiGHXfDR8RY5PYa&ust=D697427044081000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCID369KO94EDFQAAAAAdAAAAABAE",
+        
     },
     {
-        "id": 2,
-        "name": "Dr. Jane Smith",
-        "specialty": "Cardiologist",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 0,
-            "eggIcons": 0
-        },
-        "process": false
+        "id": 'A02',
+        "bird_type": "Chich Choe Than", 
+        "isMale" : "Mai",
+        "hatch_date" : "22/02/2023",
+        "father_id" : "B02",
+        "mother_id" : "C02",
+        "cage_id" : "D02",
+        "isAlive" : "1",
+        "age_range" : "Chim Chuyen Cành",
+        "mutation_rate" : 5,   
+        "mutation_note" : "Mat Do",  
+        "weight" : 300,
+        "feather_color" : "Vang",
+        "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.alongwalker.co%2F89-hinh-anh-chim-chich-choe-than-va-chich-choe-lua-dep-nhat-s361197.html&psig=AOvVaw0KtIVpEOiGHXf1R8RY5PYa&ust=1697427044081000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCID369KO94EDFQAAAAAdAAAAABAI",
+        
     },
     {
-        "id": 3,
-        "name": "Dr. Emily Johnson",
-        "specialty": "Pediatrician",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 5,
-            "eggIcons": 2
-        },
-        "process": false
-
-    },
-    {
-        "id": 6,
-        "name": "Dr. Emily Johnson",
-        "specialty": "Pediatrician",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 5,
-            "eggIcons": 2
-        },
-        "process": false
-
-    },
-    {
-        "id": 4,
-        "name": "Dr. Emily Johnson",
-        "specialty": "Pediatrician",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 5,
-            "eggIcons": 2
-        },
-        "process": false
-
-    },
-    {
-        "id": 5,
-        "name": "Dr. Emily Johnson",
-        "specialty": "Pediatrician",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 0,
-            "eggIcons": 0
-        },
-        "process": false
-
-    },
-    {
-        "id": 7,
-        "name": "Dr. Emily Johnson",
-        "specialty": "Pediatrician",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 0,
-            "eggIcons": 0
-        },
-        "process": false
-
-    },
-    {
-        "id": 8,
-        "name": "Dr. Emily Johnson",
-        "specialty": "Pediatrician",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 0,
-            "eggIcons": 0
-        },
-        "process": false
-
-    },
-    {
-        "id": 9,
-        "name": "Dr. Emily Johnson",
-        "specialty": "Pediatrician",
-        "imageSrc": "https://via.placeholder.com/90/f8f8f8/2b2b2b",
-        "starReview": {
-            "crowIcons": 0,
-            "eggIcons": 0
-        },
-        "process": false
-
+        "id": 'A03',
+        "bird_type": "Chich Choe Lua", 
+        "isMale" : "Trong",
+        "hatch_date" : "32/02/2023",
+        "father_id" : "B03",
+        "mother_id" : "C03",
+        "cage_id" : "D03",
+        "isAlive" : "1",
+        "age_range" : "Chim Non",
+        "mutation_rate" : 3,   
+        "mutation_note" : undefined,  
+        "weight" : 250,
+        "feather_color" : "trang",
+        "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fvnexpress.net%2Fhanh-khach-mat-chich-choe-10-700-usd-4033557.html&psig=AOvVaw0KtIVpEOiGHXf1R8RY5PYa&ust=1697427044081000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCID369KO94EDFQAAAAAdAAAAABAO",
+        
     },
 ]
 
@@ -168,3 +121,4 @@ export const staffs: Staff[] = [
         "role_id": '1',
     },
 ] 
+

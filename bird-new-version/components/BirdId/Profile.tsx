@@ -4,7 +4,26 @@ import MainGeneration from '../BirdFamilyTree/MainGeneration'
 import Parent from '../BirdFamilyTree/Parent'
 
 
-const Profile = () => {
+
+export type BirdType = {
+  id?: string,
+  bird_type?:string,
+  isMale?:string,
+  hatch_date?:string,
+  father_id?:string,
+  mother_id?:string,
+  cage_id?:string,
+  isAlive?:string,
+  age_range?:string,
+  mutation_rate?:number,
+  mutation_note?:string,
+  weight?:number,
+  feather_color?:string,
+  image?:string
+}
+
+const Profile = ({ id, bird_type, isMale, hatch_date, father_id, mother_id, cage_id, isAlive, age_range, 
+  mutation_rate, mutation_note, weight, feather_color, image}:BirdType) => {
   return (
 
     <div className="card">
@@ -51,53 +70,70 @@ const Profile = () => {
               <div className="col-xl-8 ">
                 <div className="flex justify-between items-center mb-2.5">
                   <label className='basis-[30%]'>ID:</label>
-                  <div className="grow pl-2.5">A01</div>
+                  <div className="grow pl-2.5">{id}</div>
                 </div>
 
                 <div className="flex justify-between items-center mb-2.5">
                   <label className='basis-[30%]'>Bird Type:</label>
-                  <div className="grow pl-2.5">Chích Chòe Than</div>
+                  <div className="grow pl-2.5">{bird_type}</div>
                 </div>
 
                 <div className="flex justify-between items-center mb-2.5">
                   <label className='basis-[30%]'>Sex:</label>
-                  <div className="grow pl-2.5">Trống</div>
+                  <div className="grow pl-2.5">{isMale}</div>
                 </div>
 
                 <div className="flex justify-between items-center mb-2.5">
-                  <label className='basis-[30%]'>Date Of Birth:</label>
-                  <div className="grow pl-2.5">08/09/2023</div>
+                  <label className='basis-[30%]'>Hatch Date:</label>
+                  <div className="grow pl-2.5">{hatch_date}</div>
                 </div>
 
                 <div className="flex justify-between items-center mb-2.5">
                   <label className='basis-[30%]'>Father Id:</label>
-                  <div className="grow pl-2.5">A02</div>
+                  <div className="grow pl-2.5">{father_id}</div>
                 </div>
 
                 <div className="flex justify-between items-center mb-2.5">
                   <label className='basis-[30%]'>Mother Id:</label>
-                  <div className="grow pl-2.5">A03</div>
+                  <div className="grow pl-2.5">{mother_id}</div>
                 </div>
                 
                 <div className="flex justify-between items-center mb-2.5">
                   <label className='basis-[30%]'>Cage Id:</label>
-                  <div className="grow pl-2.5">B01</div>
+                  <div className="grow pl-2.5">{cage_id}</div>
                 </div>
 
                 <div className="flex justify-between items-center mb-2.5">
-                  <label className='basis-[30%]'>Range:</label>
-                  <div className="grow pl-2.5">Trưởng Thành</div>
+                  <label className='basis-[30%]'>Alive:</label>
+                  <div className="grow pl-2.5">{isAlive}</div>
+                </div>
+
+                <div className="flex justify-between items-center mb-2.5">
+                  <label className='basis-[30%]'>Age Range:</label>
+                  <div className="grow pl-2.5">{age_range}</div>
                 </div>
 
                 <div className="flex justify-between items-center mb-2.5">
                   <label className='basis-[30%]'>Mutation(%):</label>
-                  <div className="grow pl-2.5">5</div>
+                  <div className="grow pl-2.5">{mutation_rate}</div>
+                </div>
+
+                <div className="flex justify-between items-center mb-2.5">
+                  <label className='basis-[30%]'>Mutation Note:</label>
+                  <div className="grow pl-2.5">{mutation_note}</div>
                 </div>
 
                 <div className="flex justify-between items-center mb-2.5">
                   <label className='basis-[30%]'>Weight(g):</label>
-                  <div className="grow pl-2.5">300</div>
+                  <div className="grow pl-2.5">{weight}</div>
                 </div>
+
+                <div className="flex justify-between items-center mb-2.5">
+                  <label className='basis-[30%]'>Feather Color:</label>
+                  <div className="grow pl-2.5">{feather_color}</div>
+                </div>
+
+                
               </div>
             </div>
           </form>
